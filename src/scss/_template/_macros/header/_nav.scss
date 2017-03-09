@@ -1,0 +1,83 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+@import "../../../_variable/sprite";
+
+
+.nav {
+	position: absolute;
+	z-index: 15;
+	@include mixinDimensions(170px, 280px);
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	margin: {
+		top: auto;
+		bottom: auto;
+	};
+
+
+	&__btn {
+		display: block;
+		color: $c-white;
+		font: {
+			size: 14px;
+			family: $f-PN-bold;
+		};
+		text-align: right;
+		height: 40px;
+
+
+		&:hover {
+			.nav__btn-text {
+				padding-right: 30px;
+				transition: padding .3s ease-in-out;
+
+
+				&:after {
+					right: -11px;
+					transition: right .3s ease-in-out;
+				}
+			}
+			.nav__btn-number {
+				color: $c-aqua;
+				transition: color .3s ease-in-out;
+			}
+		}
+
+
+		&:active {
+			.nav__btn-text {
+				color: $c-magenta;
+			}
+		}
+
+
+		&-text {
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: middle;
+			transition: padding .3s ease-in-out;
+
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 8px;
+				right: -30px;
+				@include mixinDimensions(27px, 1px);
+				background-color: $c-dim-gray;
+				transition: right .3s ease-in-out;
+			}
+		}
+
+
+		&-number {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 15px;
+			color:  $c-dim-gray;
+			transition: color .3s ease-in-out;
+		}
+	}
+}

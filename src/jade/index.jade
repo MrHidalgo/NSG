@@ -1,0 +1,20 @@
+include _mixin/mixin
+include _mixin/macrosMixin
+
+
+doctype html
+html(lang="en")
+
+
+    +headSite("NSG", linkSite.styleLinkIndex, "")
+
+
+    body
+
+        include _template/header
+        include _template/services
+        include _template/only
+
+
+    - for(var i = 0; i < linkSite.scriptLink.length; i++)
+        script(src= linkSite.scriptLink[i])

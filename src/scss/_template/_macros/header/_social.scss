@@ -1,0 +1,48 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+@import "../../../_variable/sprite";
+
+
+.social {
+	float: left;
+	position: relative;
+	z-index: 10;
+	padding-top: 25px;
+	color: $c-white;
+	font: {
+		size: 10px;
+		family: $f-PN-light;
+	};
+
+
+	&__text,
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+
+	&__btn {
+		position: relative;
+		margin-left: 20px;
+
+
+		&-line {
+			position: absolute;
+			top: 5px;
+			left: -15px;
+			width: 10px;
+			height: 1px;
+			background-color: $c-dim-gray;
+		}
+	}
+}
+@each $className, $iconName in
+					("fb", $sp-i-fb-group),
+					("be", $sp-i-be-group)
+{
+	.social__btn-#{$className} {
+		@include retina-sprite($iconName);
+		background-repeat: no-repeat;
+	}
+}

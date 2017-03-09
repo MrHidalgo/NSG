@@ -1,0 +1,18 @@
+-
+    var languageArr = [
+        "RUS",
+        "ENG",
+        "UA"
+    ];
+
+.language
+    -for(var i = 0; i < languageArr.length; i++)
+        a(
+            href="javascript:void(0);"
+            title=""
+            class= (i === 0) ? "language__btn active" : "language__btn"
+        )
+            span.language__btn-text!= languageArr[i]
+
+            if(i !== languageArr.length - 1)
+                | &nbsp;|&nbsp;

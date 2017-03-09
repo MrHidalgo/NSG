@@ -1,0 +1,111 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+
+.services {
+	position: relative;
+
+
+	&__row {
+		padding-top: 100px;
+		margin-bottom: 500px;
+		text-align: center;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+
+
+		&-list {
+			text-align: left;
+		}
+	}
+
+
+	&__tilte {
+		position: relative;
+		font: {
+			size: 20px;
+			family: $f-PN-black;
+		};
+		letter-spacing: 2px;
+		margin-bottom: 60px;
+
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			margin-left: -4.5px;
+			@include retina-sprite($sp-i-polygon-group);
+		}
+	}
+
+
+	&__text {
+		position: relative;
+		padding-left: 40px;
+		height: 36px;
+		line-height: 36px;
+		font: {
+			size: 18px;
+			family: $f-PN-regular;
+		};
+		letter-spacing: 2px;
+
+
+		.services__block-1 & {
+			margin-left: 70px;
+		}
+
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 17.5px;
+			@include mixinDimensions(30px, 1px);
+			background-color: $c-black;
+		}
+	}
+
+
+	&__сoordinate-axis,
+	&__graph-revers,
+	&__dynamic,
+	&__graph-bg-revers {
+		position: absolute;
+		bottom: 0;
+	}
+
+
+	&__сoordinate-axis {
+		opacity: .1;
+		left: 0;
+		right: 0;
+		margin: {
+			left: auto;
+			right: auto;
+		};
+	}
+
+
+	&__graph-revers {
+		left: 0;
+	}
+
+
+	&__dynamic {
+		z-index: 2;
+		right: 0;
+	}
+
+
+	&__graph-bg-revers {
+		z-index: 1;
+		left: 0;
+	}
+}

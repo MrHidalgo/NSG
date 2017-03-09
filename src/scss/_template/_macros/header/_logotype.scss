@@ -1,0 +1,16 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+
+
+.logotype {
+	cursor: pointer;
+	position: absolute;
+	z-index: 15;
+	left: 0;
+	right: 0;
+	top: 25px;
+	margin: {
+		left: auto;
+		right: auto;
+	};
+}

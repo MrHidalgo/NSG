@@ -1,0 +1,83 @@
+include ../_mixin/macrosMixin
+
+
+-
+    var servicesArr = [
+        "PRODUCTION:",
+        "COMPLEX ONLINE MARKETING:",
+        "DATA CONSULTING"
+    ];
+    var servicesArr0 = [
+        "Web sites",
+        "Chat bots",
+        "Marketing automation systems"
+    ];
+    var servicesArr1 = [
+        "Programmatic ads",
+        "SEO",
+        "PPC",
+        "E-mail marketing",
+        "UX analytics"
+    ];
+    var servicesArr2 = [
+        "Data strategy",
+        "DMP integration",
+        "Big data solutions",
+        "Eye-tracking researches"
+    ];
+
+mixin list(textArr)
+    -for(var j = 0; j < textArr.length; j++)
+        p.services__text!= textArr[j]
+
+
+section.services
+
+    .container
+
+        +mainTitle("services__title", "Our services")
+
+        .services__row
+            -for(var i = 0; i < servicesArr.length; i++)
+                div(class="services__block services__block-" + i)
+                    img(
+                        src="./image/img-services-" + i + ".png"
+                        title=""
+                        alt=""
+                        class="services__img"
+                    )
+
+                    p.services__tilte!= servicesArr[i]
+
+                    .services__row-list
+                        if(i === 0)
+                            +list(servicesArr0)
+                        else if(i === 1)
+                            +list(servicesArr1)
+                        else if(i === 2)
+                            +list(servicesArr2)
+
+    img(
+        src="./image/img-coordinate-axis.png"
+        title=""
+        alt=""
+        class="services__сoordinate-axis img_responsive"
+    )
+    img(
+        src="./image/img-graph-revers.png"
+        title=""
+        alt=""
+        class="services__graph-revers"
+    )
+    img(
+        src="./image/img-dynamic.png"
+        title=""
+        alt=""
+        class="services__dynamic img_responsive"
+    )
+    img(
+        src="./image/img-graph-bg-revers.png"
+        title=""
+        alt=""
+        class="services__graph-bg-revers img_responsive"
+    )

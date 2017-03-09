@@ -1,0 +1,103 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+
+@import "../_template/_macros/header/social";
+@import "../_template/_macros/header/language";
+@import "../_template/_macros/header/logotype";
+@import "../_template/_macros/header/nav";
+
+.header {
+	position: relative;
+	min-height: calc(100vh + 150px);
+	background-color: $c-black;
+	background-image: url("../image/img-bg.png");
+	background-repeat: repeat;
+
+
+	.container-fluid {
+		min-height: 100vh;
+	}
+
+
+	&__сoordinate-axis,
+	&__dynamic,
+	&__graph,
+	&__graph-bg {
+		position: absolute;
+		z-index: 0;
+		right: 0;
+	}
+
+
+	&__сoordinate-axis {
+		bottom: 0;
+		left: 0;
+		margin: {
+			left: auto;
+			right: auto;
+		};
+	}
+
+
+	&__dynamic {
+		bottom: -150px;
+		z-index: 2;
+	}
+
+
+	&__graph {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+
+	&__graph-bg {
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+
+	&__row {
+		position: relative;
+		padding-top: 100px;
+		z-index: 10;
+		text-align: center;
+	}
+
+
+	&__title,
+	&__sub-title {
+		color: $c-white;
+		text-align: center;
+		line-height: 1.2;
+	}
+
+
+	&__title {
+		font: {
+			size: 50px;
+			family: $f-PN-black;
+		};
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		padding: {
+			top: (150) * 1px;
+			bottom: 70px;
+		}
+	}
+
+
+	&__sub-title {
+		font: {
+			size: 22px;
+			family: $f-PN-regular;
+		};
+		padding-bottom: 130px;
+	}
+}

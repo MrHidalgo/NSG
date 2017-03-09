@@ -1,0 +1,27 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+@import "../../../_variable/sprite";
+
+
+.language {
+	float: right;
+	position: relative;
+	z-index: 10;
+	padding-top: 21px;
+
+
+	&__btn {
+		font: {
+			size: 10px;
+			family: $f-PN-light;
+		};
+		color: $c-grey;
+
+
+		&.active {
+			.language__btn-text {
+				color: $c-white;
+			}
+		}
+	}
+}

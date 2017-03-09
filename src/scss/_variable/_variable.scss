@@ -1,0 +1,55 @@
+@import "../_function/function";
+
+////
+/// @group  Variable
+////
+
+///
+/// @name   object
+///
+
+// Proxima Nova --> PN
+
+$object : (
+	color : (
+		white             : #FFF,
+		black             : #000,
+		nero              : #191919,
+		dim-gray          : #666,
+		grey              : #808080,
+		aqua              : #00FFFF,
+		magenta           : #FF00FF,
+		teal              : #008080,
+		purple            : #800080,
+	),
+
+	fonts : (
+		PN-light          : "proximanova-light",
+		PN-black          : "proximanova-black",
+		PN-regular        : "proximanova-reg",
+		PN-bold           : "proximanova-bold",
+		MS-bold           : "museosansbold",
+	),
+
+	dimension : (
+		all       : 100%
+	),
+);
+
+$w-all                : return-value(dimension, all);
+
+$c-white              : return-value(color, white);
+$c-black              : return-value(color, black);
+$c-nero               : return-value(color, nero);
+$c-dim-gray           : return-value(color, dim-gray);
+$c-grey               : return-value(color, grey);
+$c-aqua               : return-value(color, aqua);
+$c-magenta            : return-value(color, magenta);
+$c-teal               : return-value(color, teal);
+$c-purple             : return-value(color, purple);
+
+$f-PN-light           : return-value(fonts, PN-light);
+$f-PN-black           : return-value(fonts, PN-black);
+$f-PN-regular         : return-value(fonts, PN-regular);
+$f-PN-bold            : return-value(fonts, PN-bold);
+$f-MS-bold            : return-value(fonts, MS-bold);

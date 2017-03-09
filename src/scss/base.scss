@@ -1,0 +1,103 @@
+///
+/// IMPORT FILES
+///
+@import "./_mixin/mixin";
+@import "./_variable/variable";
+///
+/// BTN
+///
+.btn {
+	height: 55px;
+	line-height: 55px;
+	color: $c-white;
+	border: 2px solid $c-white;
+	background-color: $c-black;
+	padding: {
+		left: 30px;
+		right: 30px;
+	};
+	font: {
+		size: 18px;
+		family: $f-MS-bold;
+	}
+	text-align: center;
+	transition: background-color .2s ease-in-out;
+
+
+	&:hover {
+		border-color: $c-teal;
+		background-color: $c-teal;
+		transition: background-color .2s ease-in-out;
+	}
+
+
+	&:active {
+		border-color: $c-purple;
+		background-color: $c-purple;
+	}
+
+
+	&_header {
+		display: inline-block;
+		width: 230px;
+	}
+
+
+	&_only {
+		display: block;
+		margin: {
+			top: 30px;
+			left: auto;
+			right: auto;
+		}
+		width: 530px;
+	}
+}
+///
+/// SECTION
+///
+section {
+	position: relative;
+	z-index: 10;
+}
+///
+/// MAIN [tilte]
+///
+.main {
+	&__title {
+		font: {
+			size: 50px;
+			family: $f-PN-black;
+		};
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.2;
+
+
+		&-text {
+			position: relative;
+			padding: {
+				left: 80px;
+				right: 80px;
+			};
+
+
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				top: 27px;
+				@include mixinDimensions(45px, 1px);
+				background-color: $c-black;
+			}
+
+			&:before {
+				left: 0;
+			}
+			&:after {
+				right: 0;
+			}
+		}
+	}
+}

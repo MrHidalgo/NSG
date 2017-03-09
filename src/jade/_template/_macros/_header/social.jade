@@ -1,0 +1,16 @@
+-
+    var socialArr = [
+        "fb",
+        "be"
+    ];
+
+.social
+    span.social__text!= "FIND US ON"
+
+    -for(var i = 0; i < socialArr.length; i++)
+        a(
+            href="javascript:void(0);"
+            title=""
+            class="social__btn social__btn-" + socialArr[i]
+        )
+            i.social__btn-line

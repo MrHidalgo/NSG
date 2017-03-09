@@ -1,0 +1,21 @@
+-
+    var navArr = [
+        "WHO WE ARE",
+        "WHAT WE DO",
+        "HOW IT WORKS",
+        "PORTFOLIO",
+        "CLIENTS",
+        "PARTNERS",
+        "CONTACTS"
+    ];
+
+
+nav.nav
+    -for(var i = 0, j = 1; i < navArr.length; i++, j++)
+        a(
+            href="javascript:void(0);"
+            title=""
+            class="nav__btn"
+        )
+            span.nav__btn-text!= navArr[i]
+            span.nav__btn-number!= "/0" + j

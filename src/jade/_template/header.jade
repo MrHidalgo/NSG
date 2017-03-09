@@ -1,0 +1,63 @@
+-
+    var headerTitle = "We turn data into</br>marketing results";
+    var headerSubTitle = "Septa is a data-driven digital agency. We help brands collect,</br>organize and use data to improve their marketing performance."
+
+
+header.header
+
+    .container-fluid.clearfix
+
+        include _macros/_header/social
+
+        img(
+            src="./image/img-logotype.png"
+            title=""
+            alt=""
+            class="logotype"
+        )
+
+        include _macros/_header/language
+
+        .clearfix
+
+        .header__row
+            .container
+                h1.header__title!= headerTitle
+
+                h2.header__sub-title!= headerSubTitle
+
+
+                a(
+                    href="javascript:void(0);"
+                    title=""
+                    class="btn btn_header btn-start-js"
+                )!= "START A PROJECT"
+
+
+        include _macros/_header/nav
+
+    img(
+        src="./image/img-coordinate-axis.png"
+        title=""
+        alt=""
+        class="header__сoordinate-axis img_responsive"
+    )
+    img(
+        src="./image/img-dynamic.png"
+        title=""
+        alt=""
+        class="header__dynamic img_responsive"
+    )
+    img(
+        src="./image/img-graph.png"
+        title=""
+        alt=""
+        class="header__graph img_responsive"
+    )
+    img(
+        src="./image/img-graph-bg.png"
+        title=""
+        alt=""
+        class="header__graph-bg img_responsive"
+    )
+
