@@ -3,6 +3,7 @@
 ///
 @import "./_mixin/mixin";
 @import "./_variable/variable";
+@import "./_variable/sprite";
 ///
 /// BTN
 ///
@@ -21,13 +22,12 @@
 		family: $f-MS-bold;
 	}
 	text-align: center;
-	transition: background-color .2s ease-in-out;
 
 
 	&:hover {
 		border-color: $c-teal;
 		background-color: $c-teal;
-		transition: background-color .2s ease-in-out;
+		transition: background .2s ease-in-out;
 	}
 
 
@@ -52,6 +52,47 @@
 		}
 		width: 530px;
 	}
+
+
+	&_case,
+	&_insight,
+	&_feedback {
+		width: 270px;
+	}
+
+
+	&_feedback {
+		position: relative;
+		top: 50px;
+		margin: {
+			top: 50px;
+			left: auto;
+			right: auto;
+		}
+	}
+
+
+	&_more {
+		display: block;
+		color: $c-black;
+		background-color: $c-white;
+		border-color: $c-black;
+
+
+		&:hover {
+			border-color: $c-teal;
+			background-color: $c-teal;
+			color: $c-white;
+			transition: background, color .2s ease-in-out;
+		}
+
+
+		&:active {
+			color: $c-white;
+			border-color: $c-purple;
+			background-color: $c-purple;
+		}
+	}
 }
 ///
 /// SECTION
@@ -61,7 +102,7 @@ section {
 	z-index: 10;
 }
 ///
-/// MAIN [tilte]
+/// MAIN [title]
 ///
 .main {
 	&__title {
@@ -98,6 +139,72 @@ section {
 			&:after {
 				right: 0;
 			}
+		}
+	}
+}
+///
+/// SLIDER
+///
+.owl {
+	&-nav {}
+
+
+	&-prev,
+	&-next {
+		position: relative;
+		display: inline-block;
+		@include mixinDimensions(50px);
+		line-height: 50px;
+		font-size: 0;
+		text-align: center;
+
+
+		.case__right-carousel & {
+			position: absolute;
+			top: 0;
+		}
+
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+
+	&-prev {
+		margin-right: 5px;
+		&:before {
+			@include retina-sprite($sp-i-carousel-left-group);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			right: -5px;
+			top: 0;
+			@include mixinDimensions(1px, 50px);
+			background-color: $c-black;
+
+
+			.case__right-carousel & {
+				display: none;
+			}
+		}
+
+
+		.case__right-carousel & {
+			left: 15%;
+		}
+	}
+	&-next {
+		margin-left: 5px;
+		&:before {
+			@include retina-sprite($sp-i-carousel-right-group);
+		}
+
+		.case__right-carousel & {
+			right: 15%;
 		}
 	}
 }

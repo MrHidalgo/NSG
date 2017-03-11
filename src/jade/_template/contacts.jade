@@ -1,0 +1,50 @@
+include ../_mixin/macrosMixin
+
+
+-
+    var contactsAddres = "Украина, г.Киев</br>ул.Дмитриевская 52-б";
+    var contactsCall = "+38093 546 03 21</br>+38093 443 85 71";
+    var contactsArr = [
+        "mailto:office@septa-agency.com",
+        "javascript:void(0);",
+        "javascript:void(0);"
+    ];
+    var contactsArr1 = [
+        "office@septa-agency.com",
+        "Behance",
+        "Facebook"
+    ];
+
+
+section.contacts
+
+    .container
+
+        +mainTitle("contacts__title", "contacts")
+
+        .contacts__row.clearfix
+            .contacts_left
+                p.contacts__sub-title!= "/ address:"
+                p.contacts__text!= contactsAddres
+
+                p.contacts__sub-title!= "/ call us:"
+                p.contacts__text!= contactsCall
+
+                ul.contacts__list
+                    -for(var i = 0; i < contactsArr.length; i++)
+                        li.contacts__list-item
+                            .contacts__icon-wrap
+                                i(class="contacts__icon contacts__icon-" + i)
+                            a(
+                                href= contactsArr[i]
+                                title=""
+                                class="contacts__list-btn"
+                            )!= contactsArr1[i]
+
+            .contacts_right
+                img(
+                    src="./image/i-contacts-bg.png"
+                    alt=""
+                    title=""
+                    class="img_responsive contacts__map-bg"
+                )

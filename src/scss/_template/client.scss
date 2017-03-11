@@ -1,0 +1,52 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+
+.client {
+	position: relative;
+	padding: {
+		top: 100px;
+		bottom: 150px;
+	}
+
+
+	.container {
+		z-index: 1;
+	}
+
+
+	&__title {
+		padding-bottom: 100px;
+	}
+
+
+	&__carousel {
+		text-align: center;
+
+
+		.owl-stage {
+			display: flex;
+			align-items: center;
+		}
+		.owl-item {
+			overflow: hidden;
+			text-align: center;
+		}
+	}
+
+
+	&__img {
+		display: inline-block !important;
+
+
+		&-dynamic {
+			position: absolute;
+			z-index: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}

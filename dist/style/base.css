@@ -10,16 +10,14 @@
   font-size: 18px;
   font-family: "museosansbold";
   text-align: center;
-  -webkit-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
 }
 
 
 .btn:hover {
   border-color: #008080;
   background-color: #008080;
-  -webkit-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
 
@@ -41,6 +39,44 @@
   margin-left: auto;
   margin-right: auto;
   width: 530px;
+}
+
+
+.btn_case, .btn_insight, .btn_feedback {
+  width: 270px;
+}
+
+
+.btn_feedback {
+  position: relative;
+  top: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.btn_more {
+  display: block;
+  color: #000;
+  background-color: #FFF;
+  border-color: #000;
+}
+
+
+.btn_more:hover {
+  border-color: #008080;
+  background-color: #008080;
+  color: #FFF;
+  -webkit-transition: background, color .2s ease-in-out;
+  transition: background, color .2s ease-in-out;
+}
+
+
+.btn_more:active {
+  color: #FFF;
+  border-color: #800080;
+  background-color: #800080;
 }
 
 
@@ -84,6 +120,100 @@ section {
 
 .main__title-text:after {
   right: 0;
+}
+
+
+.owl-prev, .owl-next {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 0;
+  text-align: center;
+}
+
+
+.case__right-carousel .owl-prev, .case__right-carousel .owl-next {
+  position: absolute;
+  top: 0;
+}
+
+
+.owl-prev:before, .owl-next:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.owl-prev {
+  margin-right: 5px;
+}
+
+
+.owl-prev:before {
+  background-image: url(../image/sprite.png);
+  background-position: -60px -98px;
+  width: 18px;
+  height: 20px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .owl-prev:before {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 130px 130px;
+            background-size: 130px 130px;
+  }
+}
+
+
+.owl-prev:after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 0;
+  width: 1px;
+  height: 50px;
+  background-color: #000;
+}
+
+
+.case__right-carousel .owl-prev:after {
+  display: none;
+}
+
+
+.case__right-carousel .owl-prev {
+  left: 15%;
+}
+
+
+.owl-next {
+  margin-left: 5px;
+}
+
+
+.owl-next:before {
+  background-image: url(../image/sprite.png);
+  background-position: -37px -98px;
+  width: 18px;
+  height: 20px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .owl-next:before {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 130px 130px;
+            background-size: 130px 130px;
+  }
+}
+
+
+.case__right-carousel .owl-next {
+  right: 15%;
 }
 
 

@@ -1,0 +1,54 @@
+include ../_mixin/macrosMixin
+
+
+section.feedback
+
+    .container
+
+        +mainTitle("feedback__title", "feedback")
+
+        .feedback__row.clearfix
+            .feedback_left
+                .feedback__wrap
+                    p.feedback__sub-title!= "/ name"
+                    input(
+                        type="text"
+                        class="feedback__input"
+                        name="name"
+                    )
+                .feedback__wrap
+                    p.feedback__sub-title!= "/ e-mail"
+                    input(
+                        type="text"
+                        class="feedback__input"
+                        name="email"
+                    )
+                .feedback__wrap
+                    p.feedback__sub-title!= "/ company"
+                    input(
+                        type="text"
+                        class="feedback__input"
+                        name="company"
+                    )
+                .feedback__wrap
+                    p.feedback__sub-title!= "/ phone"
+                    input(
+                        type="text"
+                        class="feedback__input"
+                        name="phone"
+                    )
+
+            .feedback_right
+                .feedback__wrap
+                    p.feedback__sub-title!= "/ message"
+                    textarea(
+                        class="feedback__textarea"
+                        name="message"
+                    )
+
+        .feedback__row
+            a(
+                href="javascript:void(0);"
+                title=""
+                class="btn btn_more btn_feedback btn-feedback-js"
+            )!= "START A PROJECT"

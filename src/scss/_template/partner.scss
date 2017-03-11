@@ -1,0 +1,151 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+
+.partner {
+	position: relative;
+	padding: {
+		top: 100px;
+	}
+
+
+	.container {
+		z-index: 1;
+	}
+
+
+	&__title {
+		padding-bottom: 100px;
+	}
+
+
+	&__btn {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		padding: {
+			left: 40px;
+			right: 40px;
+		};
+		margin: {
+			left: 10px;
+			right: 10px;
+		};
+		font: {
+			size: 20px;
+			family: $f-PN-black;
+		};
+		color: $c-dim-gray;
+		text-transform: uppercase;
+		transition: color .3s ease-in-out;
+
+
+		&:hover {
+			color: $c-black;
+			transition: color .3s ease-in-out;
+
+
+			&:before,
+			&:after {
+				opacity: 1;
+				transition: opacity .3s ease-in-out;
+			}
+		}
+
+
+		&.active {
+			color: $c-black;
+			transition: color .3s ease-in-out;
+
+			&:before,
+			&:after,
+			.partner__btn-icon {
+				opacity: 1;
+				transition: opacity .3s ease-in-out;
+			}
+		}
+
+
+		&:before,
+		&:after {
+			opacity: 0;
+			content: "";
+			position: absolute;
+			top: 13px;
+			@include mixinDimensions(25px, 1px);
+			background-color: $c-black;
+			transition: opacity .3s ease-in-out;
+		}
+
+
+
+		&:before {
+			left: 0;
+		}
+
+
+		&:after {
+			right: 0;
+		}
+
+
+		&-wrap {
+			margin-bottom: 100px;
+			text-align: center;
+		}
+
+
+		&-icon {
+			opacity: 0;
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			margin-left: -4.5px;
+			@include retina-sprite($sp-i-polygon-group);
+			transition: opacity .2s ease-in-out;
+		}
+	}
+
+
+	&__carousel {
+		text-align: center;
+
+
+		&_hide {
+			opacity: 0;
+			height: 0;
+			visibility: hidden;
+		}
+		&_show {
+			opacity: 1;
+			height: auto;
+			visibility: visible;
+		}
+
+
+		.owl-stage {
+			display: flex;
+			align-items: center;
+		}
+		.owl-item {
+			overflow: hidden;
+			text-align: center;
+		}
+	}
+
+
+	&__img {
+		display: inline-block !important;
+
+
+		&-dynamic {
+			position: absolute;
+			z-index: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}

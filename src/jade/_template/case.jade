@@ -1,0 +1,106 @@
+include ../_mixin/macrosMixin
+
+
+-
+    var caseText0 = "Придумать рекламную кампанию, которая поможет распродать квартиры ЖК в кризисный период при падающем долларе. По соседству с «Энергией Плюс» было несколько крупных комплексов, которые завесили район своей наружной рекламой. Нам предстояло победить в конкурентной борьбе при меньшем бюджете.";
+    var caseText1 = "Придумать рекламную кампанию, которая поможет распродать квартиры ЖК в кризисный период при падающем долларе. По соседству с «Энергией Плюс» было несколько крупных комплексов, котПридумать рекламную кампанию, которая поможет распродать квартиры ЖК в кризисный период при падающем долларе. По соседству с «Энергией Плюс» было несколько крупных комплексов, которые завесили район своей наружной рекламой. Нам предстояло победить в конкурентной борьбе при меньшем бюджете.орые завесили район своей наружной рекламой. Нам предстояло победить в конкурентной борьбе при меньшем бюджете.";
+    var caseArr = [
+        "За время рекламной кампании</br>продано 28 квартир",
+        "Общая стоимость проданной недвижимости:</br>25 млн гривен",
+        "Маркетинговые расходы</br>на продажу 1 м2 — 400 грн",
+        "На сайте ЖК побывало</br>40 000 человек"
+    ];
+
+
+section.case
+
+    .container
+
+        +mainTitle("case__title", "latest case")
+
+        .case__row.clearfix
+
+            .case_left
+
+                .case__bg
+                    .case__left-carousel.owl-carousel
+                        img(
+                            src="./image/img-case.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__bg-img"
+                        )
+                        img(
+                            src="./image/img-case.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__bg-img"
+                        )
+                        img(
+                            src="./image/img-case.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__bg-img"
+                        )
+                        img(
+                            src="./image/img-case.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__bg-img"
+                        )
+
+
+            .case_right
+                .case__right-carousel.owl-carousel
+                    .case__right-wrap
+                        img(
+                            src="./image/img-case-coo.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__right-img"
+                        )
+                    .case__right-wrap
+                        img(
+                            src="./image/img-case-coo.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__right-img"
+                        )
+                    .case__right-wrap
+                        img(
+                            src="./image/img-case-coo.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__right-img"
+                        )
+                    .case__right-wrap
+                        img(
+                            src="./image/img-case-coo.png"
+                            alt=""
+                            title=""
+                            class="img_responsive case__right-img"
+                        )
+
+
+
+                .case__right-desc
+                    p.case__title!= "/ задача"
+                    p.case__text!= caseText0
+                    p.case__title!= "/ реализация"
+                    p.case__text!= caseText1
+                    p.case__title!= "/ результаты"
+
+                    ul.case__list
+                        -for(var i = 0; i < caseArr.length; i++)
+                            li.case__list-item
+                                .case__list-icon-wrap
+                                    i(class="case__list-icon case__list-icon-" + i)
+                                p.case__list-text.case__text!= caseArr[i]
+
+
+    img(
+        src="./image/img-dynamic.png"
+        alt=""
+        title=""
+        class="img_responsive case__img-dynamic"
+    )

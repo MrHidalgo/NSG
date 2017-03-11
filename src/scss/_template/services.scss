@@ -7,11 +7,11 @@
 
 .services {
 	position: relative;
+	z-index: 1;
 
 
 	&__row {
 		padding-top: 100px;
-		margin-bottom: 500px;
 		text-align: center;
 		display: flex;
 		flex-flow: row wrap;
@@ -73,12 +73,9 @@
 	}
 
 
-	&__сoordinate-axis,
-	&__graph-revers,
-	&__dynamic,
-	&__graph-bg-revers {
+	&__сoordinate-axis {
 		position: absolute;
-		bottom: 0;
+		bottom: -420px;
 	}
 
 
@@ -90,22 +87,5 @@
 			left: auto;
 			right: auto;
 		};
-	}
-
-
-	&__graph-revers {
-		left: 0;
-	}
-
-
-	&__dynamic {
-		z-index: 2;
-		right: 0;
-	}
-
-
-	&__graph-bg-revers {
-		z-index: 1;
-		left: 0;
 	}
 }

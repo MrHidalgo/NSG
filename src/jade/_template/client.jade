@@ -1,0 +1,25 @@
+include ../_mixin/macrosMixin
+
+
+section.client
+
+    .container
+
+        +mainTitle("client__title", "clients")
+
+        .client__row
+            div(class="client__carousel owl-carousel")
+                -for(var i = 0; i < 6; i++)
+                    img(
+                        src="./image/img-partner-" + i + ".png"
+                        alt=""
+                        title=""
+                        class="img_responsive client__img"
+                    )
+
+    img(
+        src="./image/img-dynamic.png"
+        alt=""
+        title=""
+        class="img_responsive client__img-dynamic"
+    )
