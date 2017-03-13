@@ -14,6 +14,21 @@
 		top: auto;
 		bottom: auto;
 	};
+	@include respond-to(large-max) {
+		display: none;
+	}
+
+
+	.navigation--fixed & {
+		display: block;
+		position: relative;
+		left: 50%;
+		margin-left: -85px;
+		@include respond-to(small-max) {
+			top: 130px;
+			margin-bottom: 50px;
+		}
+	}
 
 
 	&__btn {

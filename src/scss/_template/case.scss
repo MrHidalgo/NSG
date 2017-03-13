@@ -8,6 +8,9 @@
 .case {
 	position: relative;
 	padding-bottom: 100px;
+	@include respond-to(small-max) {
+		padding-bottom: 50px;
+	}
 
 
 	.container {
@@ -24,6 +27,21 @@
 	&_right {
 		float: left;
 		width: 50%;
+		@include respond-to(small-max) {
+			float: none;
+			width: $w-all;
+			padding: {
+				left: 15px;
+				right: 15px;
+			};
+		}
+	}
+
+
+	&_right {
+		@include respond-to(large) {
+			padding-left: 30px;
+		}
 	}
 
 
@@ -32,12 +50,22 @@
 		@include mixinDimensions(491px, 519px);
 		background-image: url("../image/img-case-bg.png");
 		background-repeat: no-repeat;
+		@include respond-to(large-max) {
+			width: $w-all;
+		}
+		@include respond-to(small-max) {
+			background-image: none;
+			height: auto;
+		}
 
 
 		&-img {
 			position: absolute;
 			top: 8px;
 			left: 6px;
+			@include respond-to(small-max) {
+				position: static;
+			}
 		}
 	}
 
@@ -45,6 +73,9 @@
 	&__left-carousel {
 		.owl-item {
 			height: 519px;
+			@include respond-to(small-max) {
+				height: auto;
+			}
 		}
 		.owl-nav {
 			margin-top: 15px;
@@ -65,7 +96,7 @@
 	}
 
 
-	&__title,
+	&__sub-title,
 	&__text {
 		font: {
 			family: $f-PN-bold;
@@ -74,7 +105,7 @@
 	}
 
 
-	&__title {
+	&__sub-title {
 		color: $c-dim-gray;
 	}
 

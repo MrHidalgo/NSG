@@ -1,5 +1,5 @@
 @import "../../../_mixin/mixin";
-@import "../../../_function/function";
+@import "../../../_variable/variable";
 ///
 /// DECLARATION VARIABLE
 ///
@@ -11,14 +11,7 @@ $c-nero 			      : return-value(color, nero);
 /// MAIN
 ///
 .btn-menu {
-	@include mixinDimensions(34px, 24px);
-
-
-	&:hover {
-		.btn-menu__line {
-			width: 34px;
-		}
-	}
+	@include mixinDimensions(34px, 25px);
 
 
 	&.active {
@@ -54,9 +47,9 @@ $c-nero 			      : return-value(color, nero);
 		position: absolute;
 		right: 0;
 
-		@include mixinDimensions(34px, 2px);
+		@include mixinDimensions(34px, 3px);
 
-		background-color: $c-nero;
+		background-color: $c-white;
 
 		transition: all .3s ease-in-out;
 		@include respond-to(small-max) {
@@ -78,6 +71,16 @@ $c-nero 			      : return-value(color, nero);
 			width: 30px;
 
 			bottom: 0;
+		}
+	}
+}
+@media screen and (min-width: 1025px){
+	.btn-menu {
+		&:hover {
+			.btn-menu__line {
+				width: 34px;
+				transition: all .3s ease-in-out;
+			}
 		}
 	}
 }

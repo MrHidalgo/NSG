@@ -10,12 +10,20 @@
 	z-index: 1;
 
 
+	.container {
+		z-index: 10;
+	}
+
+
 	&__row {
 		padding-top: 100px;
 		text-align: center;
 		display: flex;
-		flex-flow: row wrap;
 		justify-content: space-between;
+		@include respond-to(small-max) {
+			flex-direction: column;
+			padding-top: 50px;
+		}
 
 
 		&-list {
@@ -24,19 +32,61 @@
 	}
 
 
+	&__block {
+		margin: {
+			left: 5px;
+			right: 5px;
+		};
+		@include respond-to(small-max) {
+			margin: 0 0 30px;
+			padding: {
+				left: 15px;
+				right: 15px;
+			};
+		}
+	}
+
+
+	&__img {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		@include respond-to(small-max) {
+			position: static;
+			margin: {
+				left: auto;
+				right: auto;
+			};
+		}
+
+
+		&-wrap {
+			position: relative;
+			height: 85px;
+			margin-bottom: 10px;
+		}
+	}
+
+
 	&__tilte {
 		position: relative;
+		height: 60px;
 		font: {
 			size: 20px;
 			family: $f-PN-black;
 		};
 		letter-spacing: 2px;
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 
 
-		&:after {
-			content: "";
-			position: absolute;
+		&-text {
+			display: block;
+		}
+
+
+		&-icon{
+			position: relative;
+			display: block;
 			bottom: -10px;
 			left: 50%;
 			margin-left: -4.5px;
@@ -48,8 +98,8 @@
 	&__text {
 		position: relative;
 		padding-left: 40px;
-		height: 36px;
-		line-height: 36px;
+		//height: 36px;
+		line-height: 2;
 		font: {
 			size: 18px;
 			family: $f-PN-regular;
@@ -59,6 +109,9 @@
 
 		.services__block-1 & {
 			margin-left: 70px;
+			@include respond-to(large-max) {
+				margin-left: 0;
+			}
 		}
 
 
@@ -75,11 +128,8 @@
 
 	&__сoordinate-axis {
 		position: absolute;
+		z-index: 0;
 		bottom: -420px;
-	}
-
-
-	&__сoordinate-axis {
 		opacity: .1;
 		left: 0;
 		right: 0;

@@ -7,16 +7,22 @@ header.header
 
     .container-fluid.clearfix
 
-        include _macros/_header/social
+        .navigation
 
-        img(
-            src="./image/img-logotype.png"
-            title=""
-            alt=""
-            class="logotype"
-        )
+            include _macros/_header/social
 
-        include _macros/_header/language
+            img(
+                src="./image/img-logotype.png"
+                title=""
+                alt=""
+                class="logotype"
+            )
+
+            include _macros/_header/language
+
+            +btnMenuBurger("btn__burger")
+
+            include _macros/_header/nav
 
         .clearfix
 
@@ -34,8 +40,6 @@ header.header
                 )!= "START A PROJECT"
 
 
-        include _macros/_header/nav
-
     img(
         src="./image/img-coordinate-axis.png"
         title=""
@@ -46,7 +50,7 @@ header.header
         src="./image/img-dynamic.png"
         title=""
         alt=""
-        class="header__dynamic img_responsive"
+        class="header__dynamic"
     )
     img(
         src="./image/img-graph.png"

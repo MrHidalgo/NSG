@@ -14,10 +14,16 @@ html {
 html,
 body {
 	width: $w-all;
-	height: $w-all;
+	//height: $w-all;
 	min-height: $w-all;
 	@include respond-to(large-max) {
 		overflow-x: hidden;
+	}
+
+
+	&.open-menu,
+	&.open-popup {
+		overflow: hidden;
 	}
 }
 
@@ -41,19 +47,6 @@ body{
 	background-color: $c-white;
 
 	overflow-x: hidden;
-
-
-	&.open-menu,
-	&.open-popup {
-		overflow: hidden;
-	}
-
-	&.fixed {
-
-		@include respond-to(hard-max) {
-
-		}
-	}
 }
 
 @media only screen and(max-width: 1024px) {
@@ -64,14 +57,12 @@ body{
 		height: 100%;
 	}
 }
-@media only screen and (max-width: 767px) {
-	* {
-		box-sizing: border-box;
+* {
+	box-sizing: border-box;
 
-		&:before,
-		&:after {
-			box-sizing: border-box;
-		}
+	&:before,
+	&:after {
+		box-sizing: border-box;
 	}
 }
 

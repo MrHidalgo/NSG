@@ -14,21 +14,52 @@
 	}
 
 
-
-	&_left,
-	&_right {
-		float: left;
-	}
-
-
 	&_left {
 		padding-top: 30px;
 		width: 45%;
+		float: left;
+		@include respond-to(large-max) {
+			width: 40%;
+		}
 	}
 
 
 	&_right {
+		position: relative;
 		width: 55%;
+		float: right;
+		@include respond-to(large-max) {
+			width: 60%;
+		}
+		@include respond-to(small-max) {}
+
+
+		iframe {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			width: calc(100% - 20px);
+			height: calc(100% - 20px);
+			@include respond-to(small-max) {
+				left: 20px;
+				top: 20px;
+				width: calc(100% - 40px);
+				height: calc(100% - 40px);
+			}
+		}
+	}
+
+
+	&_left,
+	&_right {
+		@include respond-to(small-max) {
+			float: none;
+			width: $w-all;
+			padding: {
+				left: 15px;
+				right: 15px;
+			};
+		}
 	}
 
 
@@ -80,7 +111,9 @@
 
 
 	&__map {
-		&-bg {}
+		&-bg {
+			height: $w-all;
+		}
 	}
 }
 @each $className, $iconName in

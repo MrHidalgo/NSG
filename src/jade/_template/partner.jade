@@ -1,54 +1,15 @@
 include ../_mixin/macrosMixin
 
 
--
-    var partnerArr = [
-        "CRM",
-        "Point 2",
-        "Point 3"
-    ];
-
-
 section.partner
 
     .container
 
         +mainTitle("partner__title", "our partner")
 
-        .partner__btn-wrap
-            -for(var i = 0; i < partnerArr.length; i++)
-                a(
-                    href="javascript:void(0);"
-                    title=""
-                    data-partner!= i
-                    class!= (i === 0) ? "partner__btn active" : "partner__btn"
-                )
-                    != partnerArr[i]
-                    i.partner__btn-icon
-
         .partner__row
             div(class="partner__carousel owl-carousel partner__carousel-0")
                 -for(var i = 0; i < 5; i++)
-                    img(
-                        src="./image/img-partner-" + i + ".png"
-                        alt=""
-                        title=""
-                        class="img_responsive partner__img"
-                    )
-            div(
-                class="partner__carousel owl-carousel partner__carousel-1 partner__carousel_hide"
-            )
-                -for(var i = 0; i < 4; i++)
-                    img(
-                        src="./image/img-partner-" + i + ".png"
-                        alt=""
-                        title=""
-                        class="img_responsive partner__img"
-                    )
-            div(
-                class="partner__carousel owl-carousel partner__carousel-2 partner__carousel_hide"
-            )
-                -for(var i = 0; i < 6; i++)
                     img(
                         src="./image/img-partner-" + i + ".png"
                         alt=""
@@ -60,5 +21,5 @@ section.partner
         src="./image/img-dynamic.png"
         alt=""
         title=""
-        class="img_responsive partner__img-dynamic"
+        class="partner__img-dynamic"
     )

@@ -84,11 +84,11 @@ section.case
 
 
                 .case__right-desc
-                    p.case__title!= "/ задача"
+                    p.case__sub-title!= "/ задача"
                     p.case__text!= caseText0
-                    p.case__title!= "/ реализация"
+                    p.case__sub-title!= "/ реализация"
                     p.case__text!= caseText1
-                    p.case__title!= "/ результаты"
+                    p.case__sub-title!= "/ результаты"
 
                     ul.case__list
                         -for(var i = 0; i < caseArr.length; i++)
@@ -102,5 +102,5 @@ section.case
         src="./image/img-dynamic.png"
         alt=""
         title=""
-        class="img_responsive case__img-dynamic"
+        class="case__img-dynamic"
     )

@@ -4,6 +4,8 @@
 @import "./_mixin/mixin";
 @import "./_variable/variable";
 @import "./_variable/sprite";
+
+@import "./_template/_main/_macros/btn-burger";
 ///
 /// BTN
 ///
@@ -22,12 +24,13 @@
 		family: $f-MS-bold;
 	}
 	text-align: center;
+	transition: all .3s;
 
 
 	&:hover {
 		border-color: $c-teal;
 		background-color: $c-teal;
-		transition: background .2s ease-in-out;
+		transition: all .3s;
 	}
 
 
@@ -51,6 +54,11 @@
 			right: auto;
 		}
 		width: 530px;
+		@include respond-to(small-max) {
+			width: 300px;
+			padding-top: 5px;
+			line-height: 1.2;
+		}
 	}
 
 
@@ -69,6 +77,13 @@
 			left: auto;
 			right: auto;
 		}
+		@include respond-to(medium) {
+			top: 25px;
+			margin-top: 0;
+		}
+		@include respond-to(small-max) {
+			top: 0;
+		}
 	}
 
 
@@ -83,7 +98,7 @@
 			border-color: $c-teal;
 			background-color: $c-teal;
 			color: $c-white;
-			transition: background, color .2s ease-in-out;
+			transition: all .3s;
 		}
 
 
@@ -114,6 +129,9 @@ section {
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 1.2;
+		@include respond-to(small-max) {
+			font-size: 30px;
+		}
 
 
 		&-text {
@@ -122,6 +140,12 @@ section {
 				left: 80px;
 				right: 80px;
 			};
+			@include respond-to(small-max) {
+				padding: {
+					left: 35px;
+					right: 35px;
+				};
+			}
 
 
 			&:before,
@@ -131,6 +155,10 @@ section {
 				top: 27px;
 				@include mixinDimensions(45px, 1px);
 				background-color: $c-black;
+				@include respond-to(small-max) {
+					top: 18px;
+					width: 30px;
+				}
 			}
 
 			&:before {
@@ -151,6 +179,7 @@ section {
 
 	&-prev,
 	&-next {
+		cursor: pointer;
 		position: relative;
 		display: inline-block;
 		@include mixinDimensions(50px);
@@ -162,6 +191,9 @@ section {
 		.case__right-carousel & {
 			position: absolute;
 			top: 0;
+			@include respond-to(small-max) {
+				display: none;
+			}
 		}
 
 
@@ -195,6 +227,9 @@ section {
 
 		.case__right-carousel & {
 			left: 15%;
+			@include respond-to(large) {
+				left: 5%;
+			}
 		}
 	}
 	&-next {
@@ -205,6 +240,23 @@ section {
 
 		.case__right-carousel & {
 			right: 15%;
+			@include respond-to(large) {
+				right: 5%;
+			}
 		}
+	}
+}
+///
+/// BTN BURGER
+///
+.btn__burger {
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	z-index: 20;
+	top: 50px;
+	right: 15px;
+	@include respond-to(large-max) {
+		display: block;
 	}
 }

@@ -8,6 +8,20 @@
 	position: relative;
 	z-index: 10;
 	padding-top: 21px;
+	@include respond-to(medium-max) {
+		display: none;
+	}
+
+
+	.navigation--fixed & {
+		display: block;
+		position: absolute;
+		right: 100px;
+		bottom: 28px;
+		@include respond-to(small-max) {
+			right: 15px;
+		}
+	}
 
 
 	&__btn {
@@ -18,9 +32,25 @@
 		color: $c-grey;
 
 
+		.navigation--fixed & {
+			&:hover {
+				color: $c-magenta;
+			}
+		}
+
+
 		&.active {
 			.language__btn-text {
 				color: $c-white;
+
+				.navigation--fixed & {
+					color: $c-aqua;
+
+
+					&:hover {
+						color: $c-magenta;
+					}
+				}
 			}
 		}
 	}

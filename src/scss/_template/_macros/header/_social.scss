@@ -13,6 +13,25 @@
 		size: 10px;
 		family: $f-PN-light;
 	};
+	@include respond-to(medium-max) {
+		display: none;
+	}
+	@include respond-to(small-max) {
+		.footer & {
+			float: none;
+		}
+	}
+
+
+	.navigation--fixed & {
+		display: block;
+		position: absolute;
+		left: 100px;
+		bottom: 30px;
+		@include respond-to(small-max) {
+			left: 15px;
+		}
+	}
 
 
 	&__text,

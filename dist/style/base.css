@@ -1,4 +1,88 @@
 
+.btn-menu {
+  width: 34px;
+  height: 25px;
+}
+
+
+.btn-menu.active .btn-menu__line {
+  width: 34px;
+  background-color: #FFF;
+}
+
+
+.btn-menu.active .btn-menu__line-0, .btn-menu.active .btn-menu__line-1, .btn-menu.active .btn-menu__line-2 {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+
+.btn-menu.active .btn-menu__line-0 {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+
+.btn-menu.active .btn-menu__line-1 {
+  opacity: 0;
+}
+
+
+.btn-menu.active .btn-menu__line-2 {
+  bottom: 11px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+
+.btn-menu__line {
+  position: absolute;
+  right: 0;
+  width: 34px;
+  height: 3px;
+  background-color: #FFF;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .btn-menu__line {
+    background-color: #FFF;
+  }
+}
+
+
+.btn-menu__line-0 {
+  width: 34px;
+  top: 0;
+}
+
+
+.btn-menu__line-1 {
+  width: 23px;
+  top: 11px;
+}
+
+
+.btn-menu__line-2 {
+  width: 30px;
+  bottom: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  
+  .btn-menu:hover .btn-menu__line {
+    width: 34px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+}
+
+
 .btn {
   height: 55px;
   line-height: 55px;
@@ -10,14 +94,16 @@
   font-size: 18px;
   font-family: "museosansbold";
   text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 
 .btn:hover {
   border-color: #008080;
   background-color: #008080;
-  -webkit-transition: background .2s ease-in-out;
-  transition: background .2s ease-in-out;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 
@@ -41,6 +127,15 @@
   width: 530px;
 }
 
+@media screen and (max-width: 767px) {
+  
+  .btn_only {
+    width: 300px;
+    padding-top: 5px;
+    line-height: 1.2;
+  }
+}
+
 
 .btn_case, .btn_insight, .btn_feedback {
   width: 270px;
@@ -53,6 +148,21 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .btn_feedback {
+    top: 25px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .btn_feedback {
+    top: 0;
+  }
 }
 
 
@@ -68,8 +178,8 @@
   border-color: #008080;
   background-color: #008080;
   color: #FFF;
-  -webkit-transition: background, color .2s ease-in-out;
-  transition: background, color .2s ease-in-out;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 
@@ -95,11 +205,26 @@ section {
   line-height: 1.2;
 }
 
+@media screen and (max-width: 767px) {
+  
+  .main__title {
+    font-size: 30px;
+  }
+}
+
 
 .main__title-text {
   position: relative;
   padding-left: 80px;
   padding-right: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .main__title-text {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 
@@ -110,6 +235,14 @@ section {
   width: 45px;
   height: 1px;
   background-color: #000;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .main__title-text:before, .main__title-text:after {
+    top: 18px;
+    width: 30px;
+  }
 }
 
 
@@ -124,6 +257,7 @@ section {
 
 
 .owl-prev, .owl-next {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 50px;
@@ -137,6 +271,13 @@ section {
 .case__right-carousel .owl-prev, .case__right-carousel .owl-next {
   position: absolute;
   top: 0;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .case__right-carousel .owl-prev, .case__right-carousel .owl-next {
+    display: none;
+  }
 }
 
 
@@ -189,6 +330,13 @@ section {
   left: 15%;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .case__right-carousel .owl-prev {
+    left: 5%;
+  }
+}
+
 
 .owl-next {
   margin-left: 5px;
@@ -214,6 +362,30 @@ section {
 
 .case__right-carousel .owl-next {
   right: 15%;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .case__right-carousel .owl-next {
+    right: 5%;
+  }
+}
+
+
+.btn__burger {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 50px;
+  right: 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  
+  .btn__burger {
+    display: block;
+  }
 }
 
 

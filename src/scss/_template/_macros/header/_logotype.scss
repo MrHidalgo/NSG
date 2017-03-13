@@ -13,4 +13,9 @@
 		left: auto;
 		right: auto;
 	};
+	@include respond-to(small-max) {
+		.footer & {
+			position: static;
+		}
+	}
 }

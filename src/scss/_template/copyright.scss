@@ -13,4 +13,7 @@
     family: $f-PN-regular;
   };
   color: $c-white;
+	@include respond-to(small-max) {
+		float: none;
+	}
 }

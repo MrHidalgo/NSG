@@ -8,63 +8,78 @@ $(document).ready(function(){
 
 
     /* PARTNER */
-    $(".partner__btn").on("click", function(){
-        var attrBtn = $(this).attr("data-partner");
-
-        console.log(attrBtn);
-
-        $(".partner__btn").removeClass("active");
-        $(this).addClass("active");
-
-        $(".partner__carousel").removeClass("partner__carousel_show").addClass("partner__carousel_hide");
-        $(".partner__carousel-" + attrBtn).removeClass("partner__carousel_hide").addClass("partner__carousel_show");
-    });
-    /* SLIDER */
-    $(".partner__carousel-0").owlCarousel({
-        items:3,
+    $(".partner__carousel").owlCarousel({
+        items: 3,
         loop: true,
         dots: true,
-        nav:true
+        nav: true,
+        responsive: {
+            300: {
+                items: 1
+            },
+            767: {
+                items: 2
+            },
+            991: {
+                items: 3
+            }
+        }
     });
-    $(".partner__carousel-1").owlCarousel({
-        items:3,
-        loop: true,
-        dots: true,
-        nav:true
-    });
-    $(".partner__carousel-2").owlCarousel({
-        items:3,
-        loop: true,
-        dots: true,
-        nav:true
-    });
-    // var count = 1;
-    // $(".slider__carousel .owl-dot").each(function(){
-    //     $(this).find("span").text("0" + count);
-    //     count++;
-    // });
 
 
     /* CLIENT SLIDER */
     $(".client__carousel").owlCarousel({
-        items:3,
+        items: 3,
         loop: true,
         dots: true,
-        nav:true
+        nav: true,
+        responsive: {
+            300: {
+                items: 1
+            },
+            767: {
+                items: 2
+            },
+            991: {
+                items: 3
+            }
+        }
     });
 
 
     /* CASE CAROUSEL */
     $(".case__left-carousel").owlCarousel({
-        items:1,
+        items: 1,
         loop: false,
         dots: true,
         nav:true
     });
     $(".case__right-carousel").owlCarousel({
-        items:1,
+        items: 1,
         loop: false,
         dots: true,
         nav:true
+    });
+
+
+    /* FEEDBACK */
+    $(".feedback__input").on("focus", function(){
+        $(this).closest(".feedback__field").addClass("feedback_filled");
+    });
+    $(".feedback__input").on("blur", function(){
+        var inputVal = $(this).val();
+
+        if(!inputVal.length > 0) {
+            $(this).closest(".feedback__field").removeClass("feedback_filled");
+        }
+    });
+
+
+    /* BTN BURGER */
+    $(".btn__burger").on("click", function(){
+        $(this).toggleClass("active");
+
+        $("body, html").toggleClass("open-menu")
+        $(".navigation").toggleClass("navigation--fixed")
     });
 });

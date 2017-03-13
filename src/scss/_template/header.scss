@@ -8,17 +8,19 @@
 @import "../_template/_macros/header/language";
 @import "../_template/_macros/header/logotype";
 @import "../_template/_macros/header/nav";
+@import "../_template/_macros/header/navigation";
 
 .header {
 	position: relative;
-	min-height: calc(100vh + 150px);
+	min-height: 1100px;
 	background-color: $c-black;
 	background-image: url("../image/img-bg.png");
 	background-repeat: repeat;
-
-
-	.container-fluid {
-		min-height: 100vh;
+	@include respond-to(large) {
+		min-height: 800px;
+	}
+	@include respond-to(medium-max) {
+		min-height: 700px;
 	}
 
 
@@ -68,6 +70,9 @@
 		padding-top: 100px;
 		z-index: 10;
 		text-align: center;
+		@include respond-to(large-max) {
+			padding-top: 30px;
+		}
 	}
 
 
@@ -90,6 +95,15 @@
 			top: (150) * 1px;
 			bottom: 70px;
 		}
+		@include respond-to(large-max) {
+			padding: {
+				top: 80px;
+				bottom: 50px;
+			}
+		}
+		@include respond-to(small-max) {
+			font-size: 40px;
+		}
 	}
 
 
@@ -99,5 +113,11 @@
 			family: $f-PN-regular;
 		};
 		padding-bottom: 130px;
+		@include respond-to(large-max) {
+			padding-bottom: 70px;
+		}
+		@include respond-to(small-max) {
+			font-size: 20px;
+		}
 	}
 }

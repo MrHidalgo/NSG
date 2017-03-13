@@ -40,14 +40,17 @@ section.services
         .services__row
             -for(var i = 0; i < servicesArr.length; i++)
                 div(class="services__block services__block-" + i)
-                    img(
-                        src="./image/img-services-" + i + ".png"
-                        title=""
-                        alt=""
-                        class="services__img"
-                    )
+                    .services__img-wrap
+                        img(
+                            src="./image/img-services-" + i + ".png"
+                            title=""
+                            alt=""
+                            class="services__img img_responsive"
+                        )
 
-                    p.services__tilte!= servicesArr[i]
+                    p.services__tilte
+                        span.services__tilte-text!= servicesArr[i]
+                        i.services__tilte-icon
 
                     .services__row-list
                         if(i === 0)

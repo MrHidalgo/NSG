@@ -10,40 +10,76 @@ section.feedback
         .feedback__row.clearfix
             .feedback_left
                 .feedback__wrap
-                    p.feedback__sub-title!= "/ name"
-                    input(
-                        type="text"
-                        class="feedback__input"
-                        name="name"
-                    )
+                    label(
+                        for="input-0"
+                        class="feedback__sub-title"
+                    )!= "/ name"
+                    .feedback__field
+                        input(
+                            type="text"
+                            class="feedback__input"
+                            name="name"
+                            id="input-0"
+                        )
+                        span(
+                            class="feedback__span"
+                        )
                 .feedback__wrap
-                    p.feedback__sub-title!= "/ e-mail"
-                    input(
-                        type="text"
-                        class="feedback__input"
-                        name="email"
-                    )
+                    label(
+                        for="input-1"
+                        class="feedback__sub-title"
+                    )!= "/ e-mail"
+                    .feedback__field
+                        input(
+                            type="text"
+                            class="feedback__input"
+                            name="name"
+                            id="input-1"
+                        )
+                        span(
+                            class="feedback__span"
+                        )
                 .feedback__wrap
-                    p.feedback__sub-title!= "/ company"
-                    input(
-                        type="text"
-                        class="feedback__input"
-                        name="company"
-                    )
+                    label(
+                        for="input-2"
+                        class="feedback__sub-title"
+                    )!= "/ company"
+                    .feedback__field
+                        input(
+                            type="text"
+                            class="feedback__input"
+                            name="name"
+                            id="input-2"
+                        )
+                        span(
+                            class="feedback__span"
+                        )
                 .feedback__wrap
-                    p.feedback__sub-title!= "/ phone"
-                    input(
-                        type="text"
-                        class="feedback__input"
-                        name="phone"
-                    )
+                    label(
+                        for="input-3"
+                        class="feedback__sub-title"
+                    )!= "/ phone"
+                    .feedback__field
+                        input(
+                            type="text"
+                            class="feedback__input"
+                            name="name"
+                            id="input-3"
+                        )
+                        span(
+                            class="feedback__span"
+                        )
 
             .feedback_right
                 .feedback__wrap
-                    p.feedback__sub-title!= "/ message"
+                    label(
+                        for="input-4"
+                        class="feedback__sub-title"
+                    )!= "/ message"
                     textarea(
                         class="feedback__textarea"
                         name="message"
+                        id="input-4"
                     )
 
         .feedback__row

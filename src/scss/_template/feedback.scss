@@ -8,6 +8,9 @@
 .feedback {
 	position: relative;
 	z-index: 5;
+	@include respond-to(small-max) {
+		padding-bottom: 30px;
+	}
 
 
 	&__title {
@@ -22,30 +25,122 @@
 			left: auto;
 			right: auto;
 		};
+		@include respond-to(small-max) {
+			width: $w-all;
+			padding: {
+				left: 15px;
+				right: 15px;
+			};
+		}
 	}
 
 
 	&_left {
 		float: left;
+		@include respond-to(small-max) {
+			float: none;
+		}
 	}
 
 
 	&_right {
 		float: right;
 		padding-top: 13px;
+		@include respond-to(large-max) {
+			padding-top: 0;
+		}
+		@include respond-to(small-max) {
+			float: none;
+		}
 	}
 
 
 	&__wrap {
+		position: relative;
+		z-index: 1;
 		margin-bottom: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include respond-to(large-max) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 
 
 		.feedback_right & {
 			align-items: flex-start;
 			justify-content: space-around;
+		}
+	}
+
+
+	&__field {
+		position: relative;
+		z-index: 1;
+		max-width: 350px;
+		width: 350px;
+		overflow: hidden;
+		@include respond-to(large-max) {
+			max-width: $w-all;
+			width: $w-all;
+		}
+	}
+
+
+	&__span {
+		position: absolute;
+		left: 0;
+		bottom: -49px;
+		width: $w-all;
+		height: 50px;
+		border-top: 1px solid $c-dim-gray;
+		background-color: lighten($c-grey, 15%);
+		transform: translate3d(0, 0, 0);
+		transition: transform 0.4s;
+		transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+
+
+		.feedback_filled &{
+			transform: translate3d(0, -49px, 0);
+		}
+	}
+
+
+	&__input {
+		position: relative;
+		width: 100%;
+		background-color: transparent;
+		opacity: 0;
+		padding: 0 15px;
+		z-index: 100;
+		border: none;
+		color: $c-white;
+		font-family: $f-PN-bold;
+		@include mixinDimensions($w-all, 50px);
+
+
+		.feedback_filled & {
+			cursor: text;
+			opacity: 1;
+			-webkit-transition: opacity 0s 0.4s;
+			transition: opacity 0s 0.4s;
+		}
+	}
+
+
+	&__textarea {
+		@include mixinDimensions(400px, 160px);
+		border: 1px solid $c-dim-gray;
+		outline: none;
+		resize: none;
+		overflow-y: auto;
+		padding: 10px 15px;
+		@include respond-to(large-max) {
+			@include mixinDimensions($w-all, 290px);
+		}
+		@include respond-to(small-max) {
+			height: 160px;
 		}
 	}
 
@@ -56,21 +151,13 @@
 			family: $f-PN-bold;
 		};
 		color: $c-dim-gray;
-	}
+		cursor: pointer;
 
 
-	&__input {
-		@include mixinDimensions(300px, 40px);
-		background-color: transparent;
-		border: none;
-		border-bottom: 1px solid $c-dim-gray;
-		font-family: $f-PN-regular;
-	}
-
-
-	&__textarea {
-		@include mixinDimensions(400px, 160px);
-		border: 1px solid $c-dim-gray;
-		outline: none;
+		.feedback_right & {
+			@include respond-to(large-max) {
+				padding-bottom: 15px;
+			}
+		}
 	}
 }
