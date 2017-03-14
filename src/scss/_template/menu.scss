@@ -1,0 +1,31 @@
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+
+.menu {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: $w-all;
+	height: 100%;
+	min-height: 100%;
+	overflow-y: auto;
+	background-color: $c-black;
+	background-image: url("../image/img-bg.png");
+	background-repeat: repeat;
+	animation-duration: .4s;
+
+
+	.open-menu & {
+		display: block;
+	}
+
+
+	&__row {
+		padding: {
+			bottom: 15px;
+		};
+	}
+}

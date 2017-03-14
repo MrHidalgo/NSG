@@ -8,7 +8,7 @@
 @import "../_template/_macros/header/language";
 @import "../_template/_macros/header/logotype";
 @import "../_template/_macros/header/nav";
-@import "../_template/_macros/header/navigation";
+@import "_macros/header/header__fixed";
 
 .header {
 	position: relative;
@@ -120,4 +120,63 @@
 			font-size: 20px;
 		}
 	}
+
+
+	&__scroll {
+		position: absolute;
+		cursor: pointer;
+		z-index: 10;
+		bottom: -200px;
+		right: 100px;
+		height: 100px;
+		overflow: hidden;
+
+
+		&-line {
+			position: absolute;
+			top: 0;
+			left: 4px;
+			@include mixinDimensions(1px, 100px);
+			background-color: $c-black;
+		}
+
+
+		&-text {
+			display: block;
+			padding: {
+				left: 30px;
+			}
+			font: {
+				size: 12px;
+				family: $f-PN-bold;
+			};
+			color: lighten($c-black, 15%);
+			line-height: 1.2;
+
+
+			&-wrap {
+				margin-top: 35px;
+			}
+		}
+
+
+		&-icon {
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include retina-sprite($sp-i-polygon-group);
+			transform: translate3d(0, -9px, 0);
+		}
+	}
+}
+@keyframes scroll {
+	from {
+		transform: translate3d(0, -9px, 0);
+	}
+	to {
+		transform: translate3d(0, 100px, 0);
+	}
+}
+.scroll {
+	animation: scroll 2s cubic-bezier(0.7, 0, 0.3, 1);
 }

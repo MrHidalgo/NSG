@@ -59,6 +59,20 @@ section.case
                             title=""
                             class="img_responsive case__right-img"
                         )
+
+                        .case__right-desc
+                            p.case__sub-title!= "/ задача"
+                            p.case__text!= caseText0
+                            p.case__sub-title!= "/ реализация"
+                            p.case__text!= caseText1
+                            p.case__sub-title!= "/ результаты"
+
+                            ul.case__list
+                                -for(var i = 0; i < caseArr.length; i++)
+                                    li.case__list-item
+                                        .case__list-icon-wrap
+                                            i(class="case__list-icon case__list-icon-" + i)
+                                        p.case__list-text.case__text!= caseArr[i]
                     .case__right-wrap
                         img(
                             src="./image/img-case-coo.png"
@@ -66,36 +80,21 @@ section.case
                             title=""
                             class="img_responsive case__right-img"
                         )
-                    .case__right-wrap
-                        img(
-                            src="./image/img-case-coo.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__right-img"
-                        )
-                    .case__right-wrap
-                        img(
-                            src="./image/img-case-coo.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__right-img"
-                        )
 
+                        .case__right-desc
+                            p.case__sub-title!= "/ задача"
+                            p.case__text!= caseText0
+                            p.case__sub-title!= "/ реализация"
+                            p.case__text!= caseText1
+                            p.case__sub-title!= "/ результаты"
 
+                            ul.case__list
+                                -for(var i = 0; i < caseArr.length; i++)
+                                    li.case__list-item
+                                        .case__list-icon-wrap
+                                            i(class="case__list-icon case__list-icon-" + i)
+                                        p.case__list-text.case__text!= caseArr[i]
 
-                .case__right-desc
-                    p.case__sub-title!= "/ задача"
-                    p.case__text!= caseText0
-                    p.case__sub-title!= "/ реализация"
-                    p.case__text!= caseText1
-                    p.case__sub-title!= "/ результаты"
-
-                    ul.case__list
-                        -for(var i = 0; i < caseArr.length; i++)
-                            li.case__list-item
-                                .case__list-icon-wrap
-                                    i(class="case__list-icon case__list-icon-" + i)
-                                p.case__list-text.case__text!= caseArr[i]
 
 
     img(

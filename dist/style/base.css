@@ -37,6 +37,18 @@
           transform: rotate(135deg);
 }
 
+@media screen and (min-width: 992px) {
+  
+  .btn-menu:hover .btn-menu__line {
+    background-color: #00FFFF;
+  }
+}
+
+
+.btn-menu:active .btn-menu__line {
+  background-color: #FF00FF;
+}
+
 
 .btn-menu__line {
   position: absolute;
@@ -386,6 +398,12 @@ section {
   .btn__burger {
     display: block;
   }
+}
+
+
+.menu .btn__burger,
+.header__fixed .btn__burger {
+  display: block;
 }
 
 

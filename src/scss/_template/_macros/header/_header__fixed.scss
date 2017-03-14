@@ -1,0 +1,20 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+@import "../../../_variable/sprite";
+
+.header__fixed {
+	display: none;
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	@include mixinDimensions($w-all, 110px);
+	background-color: $c-black;
+	background-image: url("../image/img-bg.png");
+	background-repeat: repeat;
+
+
+	.fixed & {
+		display: block;
+	}
+}

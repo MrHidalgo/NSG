@@ -2,16 +2,40 @@
     var onlyText = "of marketers track all of their</br>marketing efforts in order to drive improvement.</br><strong>Are you among them?</strong>"
 
 
-section.only
+section.only#only
     .container
         p.only__text!= "Only"
 
-        img(
-            src="./image/img-only.png"
-            title=""
-            alt=""
-            class="only__img img_responsive"
-        )
+
+        .only__count
+            img(
+                src="./image/img-count-circle-0.png"
+                title=""
+                alt=""
+                class="only__img only__img--0 animated infinite rotateRight"
+            )
+            img(
+                src="./image/img-count-circle-1.png"
+                title=""
+                alt=""
+                class="only__img only__img--1 animated infinite rotateLeft"
+            )
+            img(
+                src="./image/img-count-circle-2.png"
+                title=""
+                alt=""
+                class="only__img only__img--2 animated infinite rotate"
+            )
+            p(
+                class="only__count-num"
+            )
+                span(
+                    class="only__count--num"
+                    data-from="0"
+                    data-to="55"
+                )!= "19"
+                span!= "%"
+
 
         p.only__text!= onlyText
 

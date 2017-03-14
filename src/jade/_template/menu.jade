@@ -1,0 +1,20 @@
+
+.menu.animated
+    .container-fluid
+
+        img(
+            src="./image/img-logotype.png"
+            title=""
+            alt=""
+            class="logotype"
+        )
+
+        +btnMenuBurger("btn__burger")
+
+        include _macros/_header/nav
+
+        .menu__row.clearfix
+
+            include _macros/_header/social
+
+            include _macros/_header/language

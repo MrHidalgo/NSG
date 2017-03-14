@@ -259,4 +259,10 @@ section {
 	@include respond-to(large-max) {
 		display: block;
 	}
+
+
+	.menu &,
+	.header__fixed & {
+		display: block;
+	}
 }

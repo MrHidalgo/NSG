@@ -41,6 +41,46 @@
 	}
 
 
+	&__count {
+		position: relative;
+		left: 0;
+		right: 0;
+		margin: {
+			top: 30px;
+			bottom: 30px;
+			left: auto;
+			right: auto;
+		};
+		@include mixinDimensions(233px, 232px);
+		line-height: 232px;
+
+
+		&-num {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			font: {
+				size: 60px;
+				family: $f-PN-black;
+			};
+			color: $c-white;
+		}
+	}
+
+
+	&__img {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+
 	&__text {
 		color: $c-white;
 		font: {
@@ -50,16 +90,6 @@
 		line-height: 1.2;
 		@include respond-to(small-max) {
 			font-size: 20px;
-		}
-	}
-
-
-	&__img {
-		margin: {
-			left: auto;
-			right: auto;
-			top: 30px;
-			bottom: 45px;
 		}
 	}
 
@@ -140,5 +170,44 @@
 				left: 0;
 			}
 		}
+	}
+}
+@keyframes rotateRight {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotateLeft {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.rotateRight {
+	.only__count--active & {
+		animation: rotateRight 1.5s linear;
+	}
+}
+.rotateLeft {
+	.only__count--active & {
+		animation: rotateLeft 1.5s linear;
+	}
+}
+.rotate {
+	.only__count--active & {
+		animation: rotate 1.5s linear;
 	}
 }

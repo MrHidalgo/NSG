@@ -8,12 +8,21 @@
         "PARTNERS",
         "CONTACTS"
     ];
+    var navHref = [
+        "#header",
+        "#services",
+        "#only",
+        "#insights",
+        "#client",
+        "#partner",
+        "#contacts"
+    ];
 
 
 nav.nav
     -for(var i = 0, j = 1; i < navArr.length; i++, j++)
         a(
-            href="javascript:void(0);"
+            href= navHref[i]
             title=""
             class="nav__btn"
         )

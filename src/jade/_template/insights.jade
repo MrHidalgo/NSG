@@ -1,0 +1,50 @@
+-
+    var insightsText = "Automating both marketing and business processes for the leading food-delivery service in Russia";
+
+
+section.insights#insights
+
+    .container
+
+        +mainTitle("insights__title", "insights")
+
+        .insights__row.clearfix
+            .insights_left
+                .insights_left-wrap
+                    .insights__img-wrap
+                        img(
+                            src="./image/img-insights-0.png"
+                            title=""
+                            alt=""
+                            class="insights__img"
+                        )
+                    .insights__text-wrap
+                        p.insights__data!= "/ 22. 11. 2016"
+                        p.insights__text!= insightsText
+
+                .insights__btn-wrap
+                    a(
+                        href="javascript:void(0);"
+                        title=""
+                        class="btn btn_header btn_more btn-more-js"
+                    )!= "SHOW MORE"
+
+            .insights_right
+                .insights_right-wrap
+                    .insights__img-wrap
+                        img(
+                            src="./image/img-insights-1.png"
+                            title=""
+                            alt=""
+                            class="insights__img"
+                        )
+                    .insights__text-wrap
+                        p.insights__data!= "/ 22. 11. 2016"
+                        p.insights__text!= insightsText
+
+                .insights__btn-wrap
+                    a(
+                        href="javascript:void(0);"
+                        title=""
+                        class="btn btn_header btn_insight btn-start-js"
+                    )!= "START"

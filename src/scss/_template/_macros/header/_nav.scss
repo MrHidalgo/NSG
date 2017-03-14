@@ -19,14 +19,16 @@
 	}
 
 
-	.navigation--fixed & {
+	.menu & {
 		display: block;
-		position: relative;
-		left: 50%;
-		margin-left: -85px;
+		left: 0;
+		right: 0;
+		margin: {
+			left: auto;
+			right: auto;
+		};
 		@include respond-to(small-max) {
-			top: 130px;
-			margin-bottom: 50px;
+			position: static;
 		}
 	}
 

@@ -16,9 +16,9 @@ body {
 	width: $w-all;
 	//height: $w-all;
 	min-height: $w-all;
-	@include respond-to(large-max) {
-		overflow-x: hidden;
-	}
+	//@include respond-to(large-max) {
+	//	overflow-x: hidden;
+	//}
 
 
 	&.open-menu,
@@ -197,9 +197,3 @@ input[type="radio"] {
 .show {display: block;}
 .hidden{opacity:0}
 .visibly{opacity:1}
-
-
-.animated {
-	animation-duration: 1s;
-	animation-fill-mode: both;
-}

@@ -43,6 +43,20 @@ $c-nero 			      : return-value(color, nero);
 	}
 
 
+	&:hover {
+		@include respond-to(large-min) {
+			.btn-menu__line {
+				background-color: $c-aqua;
+			}
+		}
+	}
+	&:active {
+		.btn-menu__line {
+			background-color: $c-magenta;
+		}
+	}
+
+
 	&__line {
 		position: absolute;
 		right: 0;

@@ -6,20 +6,20 @@
 .language {
 	float: right;
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 	padding-top: 21px;
 	@include respond-to(medium-max) {
 		display: none;
 	}
 
 
-	.navigation--fixed & {
+	.menu & {
 		display: block;
 		position: absolute;
+		bottom: 34px;
 		right: 100px;
-		bottom: 28px;
 		@include respond-to(small-max) {
-			right: 15px;
+			position: static;
 		}
 	}
 
@@ -32,26 +32,23 @@
 		color: $c-grey;
 
 
-		.navigation--fixed & {
-			&:hover {
-				color: $c-magenta;
-			}
-		}
-
-
-		&.active {
-			.language__btn-text {
+		&-text {
+			.active & {
 				color: $c-white;
-
-				.navigation--fixed & {
-					color: $c-aqua;
-
-
-					&:hover {
-						color: $c-magenta;
-					}
-				}
 			}
 		}
+	}
+
+
+	&__line {
+		display: inline-block;
+		vertical-align: middle;
+		width: 1px;
+		height: 10px;
+		background-color: $c-dim-gray;
+		margin: {
+			left: 3px;
+			right: 3px;
+		};
 	}
 }

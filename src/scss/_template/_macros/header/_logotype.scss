@@ -17,5 +17,15 @@
 		.footer & {
 			position: static;
 		}
+		.menu & {
+			position: static;
+			display: block;
+			padding: {
+				top: 25px;
+			};
+			margin: {
+				bottom: 25px;
+			}
+		}
 	}
 }
