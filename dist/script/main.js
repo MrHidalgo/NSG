@@ -23,7 +23,6 @@ $(window).on("load resize ready scroll", function(){
 });
 
 
-
 $(document).ready(function(){
 
     /* LOGO CLICK SCROLL TO TOP */
@@ -149,22 +148,116 @@ $(document).ready(function(){
                 removeClassAfterAnimation: true
             }
         );
+        $(".btn__square-0").viewportChecker({
+                callbackFunction: function() {
+                    setTimeout(function(){
+                        $(".btn__square-0").addClass("active");
+                    }, 500);
+                }
+            }
+        );
+        $(".btn__square-1").viewportChecker({
+                callbackFunction: function() {
+                    setTimeout(function(){
+                        $(".btn__square-1").addClass("active");
+                    }, 1000);
+                }
+            }
+        );
+        $(".btn__square-2").viewportChecker({
+                callbackFunction: function() {
+                    setTimeout(function(){
+                        $(".btn__square-2").addClass("active");
+                    }, 0);
+                }
+            }
+        );
+        $(".btn__square-3").viewportChecker({
+                callbackFunction: function() {
+                    setTimeout(function(){
+                        $(".btn__square-3").addClass("active");
+                    }, 1500);
+                }
+            }
+        );
         $(".only .container").addClass('hidden').viewportChecker({
-                offset: -100,
                 classToAdd: 'visible animated slideInUp',
                 classToRemove : 'hidden',
                 removeClassAfterAnimation: true,
                 callbackFunction: function(){
-                    $(".only__count").addClass("only__count--active");
-                    $(".only__count--num").countTo({
-                        speed: 1500,
-                        onComplete: function () {
-                            $(".only__img").removeClass("infinite");
-                            $(".only__count").removeClass("only__count--active");
-                        }
-                    });
+                    setTimeout(function(){
+                        $(".only__count").addClass("only__count--active");
+                        $(".only__count--num").countTo({
+                            speed: 1500,
+                            onComplete: function () {
+                                $(".only__img").removeClass("infinite");
+                                $(".only__count").removeClass("only__count--active");
+                            }
+                        });
+                    }, 500);
                 }
             }
         );
     }
+
+    /* SQUARE BTN IN HEADER */
+    // function whichTransitionEvent(){
+    //     var t,
+    //         el = document.createElement("fakeelement");
+    //
+    //     var transitions = {
+    //         "transition"      : "transitionend",
+    //         "OTransition"     : "oTransitionEnd",
+    //         "MozTransition"   : "transitionend",
+    //         "WebkitTransition": "webkitTransitionEnd"
+    //     };
+    //
+    //     for (t in transitions){
+    //         if (el.style[t] !== undefined){
+    //             return transitions[t];
+    //         }
+    //     }
+    // }
+    //
+    // var transitionEvent = whichTransitionEvent();
+    //
+    // function randomNumber() {
+    //     return Math.floor(Math.random() * (1 - 18)) + 18;
+    // }
+    //
+    // function timerStartAnimationBtn(classNameBtn, iconNameCheckAnimation, intervalNumber) {
+    //     var timerIdNumber = setInterval(function(){
+    //         var randomNum   = randomNumber(),
+    //             btnName     = $(classNameBtn),
+    //             leftNum,
+    //             topNum;
+    //
+    //         leftNum = 59 * randomNum;
+    //
+    //         randomNum = randomNumber();
+    //         topNum = 59 * randomNum;
+    //
+    //         console.log("btnName", btnName);
+    //         console.log("left", leftNum);
+    //         console.log("top", topNum);
+    //
+    //         btnName.css({
+    //             "left" : leftNum,
+    //             "top" : topNum
+    //         });
+    //
+    //         btnName.addClass("active");
+    //
+    //         $(iconNameCheckAnimation).one(transitionEvent,
+    //             function() {
+    //                 $(this).closest("btn__square").removeClass("active");
+    //                 clearInterval(timerIdNumber);
+    //             });
+    //     }, intervalNumber);
+    // }
+    //
+    // timerStartAnimationBtn(".btn__square-0", ".btn__square-icon-0", 1000);
+    // timerStartAnimationBtn(".btn__square-1", ".btn__square-icon-1", 2000);
+    // timerStartAnimationBtn(".btn__square-2", ".btn__square-icon-2", 3000);
+    // timerStartAnimationBtn(".btn__square-3", ".btn__square-icon-3", 4000);
 });

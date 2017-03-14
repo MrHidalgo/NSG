@@ -3,7 +3,27 @@
     var headerSubTitle = "Septa is a data-driven digital agency. We help brands collect,</br>organize and use data to improve their marketing performance."
 
 
+mixin btnSquare(btnClass, iconClass)
+    a(
+        href="javascript:void(0);"
+        title=""
+        class="btn__square " + btnClass
+    )
+        span.btn__square-line.btn__square-line_top
+        span.btn__square-line.btn__square-line_right
+        span.btn__square-line.btn__square-line_bottom
+        span.btn__square-line.btn__square-line_left
+        i(class="btn__square-icon " + iconClass)
+
+
 header.header#header
+
+
+    +btnSquare("btn__square-0", "btn__square-icon-0")
+    +btnSquare("btn__square-1", "btn__square-icon-1")
+    +btnSquare("btn__square-2", "btn__square-icon-2")
+    +btnSquare("btn__square-3", "btn__square-icon-3")
+
 
     .container-fluid.clearfix
 

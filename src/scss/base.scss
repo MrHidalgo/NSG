@@ -266,3 +266,163 @@ section {
 		display: block;
 	}
 }
+///
+/// BTN SQUARE
+///
+.btn__square {
+	position: absolute;
+	z-index: 30;
+	@include mixinDimensions(62px);
+	overflow: hidden;
+
+
+	&-0 {
+		left: calc(59px * 12);
+		bottom: calc(59px * 3);
+	}
+	&-1 {
+		left: calc(59px * 5);
+		bottom: calc(59px * 7);
+	}
+	&-2 {
+		right: calc(59px * 5);
+		bottom: calc(59px * 10);
+	}
+	&-3 {
+		right: calc(59px * 11);
+		bottom: calc(59px * 5);
+	}
+
+
+	&-line {
+		position: absolute;
+		background-color: rgba($c-white, .5);
+
+
+		&:after {
+			transform: scale(0);
+			content: "";
+			position: absolute;
+			@include mixinDimensions(5px);
+			background-color: rgba($c-white, .75);
+		}
+
+
+		&_top,
+		&_bottom {
+			width: 58px;
+			height: 1px;
+		}
+
+
+		&_left,
+		&_right {
+			width: 1px;
+			height: 58px;
+		}
+
+
+		&_top {
+			top: 2px;
+			left: -59px;
+			&:after {
+				top: -2px;
+				right: -2px;
+				.active & {
+					transition: transform .25s ease-in-out;
+					transition-delay: .35s;
+					transform: scale(1);
+				}
+			}
+			.active & {
+				transition: left .5s ease-in-out;
+				transition-delay: 0s;
+				left: 2px;
+			}
+		}
+		&_right {
+			top: -59px;
+			right: 2px;
+			&:after {
+				bottom: -2px;
+				right: -2px;
+				.active & {
+					transition: transform .25s ease-in-out;
+					transition-delay: 1.25s;
+					transform: scale(1);
+				}
+			}
+			.active & {
+				transition: top .5s ease-in-out;
+				transition-delay: .75s;
+				top: 2px;
+			}
+		}
+		&_bottom {
+			bottom: 2px;
+			right: -59px;
+			&:after {
+				left: -2px;
+				bottom: -2px;
+				.active & {
+					transition: transform .25s ease-in-out;
+					transition-delay: 2s;
+					transform: scale(1);
+				}
+			}
+			.active & {
+				transition: right .5s ease-in-out;
+				transition-delay: 1.5s;
+				right: 2px;
+			}
+		}
+		&_left {
+			bottom: -59px;
+			left: 2px;
+			&:after {
+				top: -2px;
+				left: -2px;
+				.active & {
+					transition: transform .25s ease-in-out;
+					transition-delay: 2.75s;
+					transform: scale(1);
+				}
+			}
+			.active & {
+				transition: bottom .5s ease-in-out;
+				transition-delay: 2.25s;
+				bottom: 2px;
+			}
+		}
+	}
+
+
+	&-icon {
+		transform: scale(0);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		.active & {
+			transition: transform .5s ease-in-out;
+			transition-delay: 3s;
+			transform: scale(1);
+		}
+
+
+		&-0 {
+			@include retina-sprite($sp-i-square-0-group);
+		}
+		&-1 {
+			@include retina-sprite($sp-i-square-1-group);
+		}
+		&-2 {
+			@include retina-sprite($sp-i-square-2-group);
+		}
+		&-3 {
+			@include retina-sprite($sp-i-square-3-group);
+		}
+	}
+}
