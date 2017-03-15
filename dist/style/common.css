@@ -621,7 +621,7 @@ input[type="radio"] {
 }
 
 
-.header__сoordinate-axis, .header__dynamic, .header__graph, .header__graph-bg {
+.header__сoordinate-axis, .header__dynamic {
   position: absolute;
   z-index: 0;
   right: 0;
@@ -639,21 +639,6 @@ input[type="radio"] {
 .header__dynamic {
   bottom: -150px;
   z-index: 2;
-}
-
-
-.header__graph {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-
-.header__graph-bg {
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 
@@ -728,7 +713,7 @@ input[type="radio"] {
 .header__scroll {
   position: absolute;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
   bottom: -200px;
   right: 100px;
   height: 100px;
@@ -808,6 +793,109 @@ input[type="radio"] {
 .scroll {
   -webkit-animation: scroll 2s cubic-bezier(0.7, 0, 0.3, 1);
           animation: scroll 2s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+
+#graph,
+#bg-header {
+  position: absolute;
+  left: 0;
+}
+
+
+#graph {
+  z-index: 10;
+  bottom: 100px;
+}
+
+
+#bg-header {
+  bottom: -30px;
+  left: 0;
+}
+
+
+.bg-header {
+  fill: #FFF;
+}
+
+
+.line {
+  fill: transparent;
+  stroke-width: 2.5px;
+}
+
+
+.line-0 {
+  stroke: #9e009e;
+}
+
+
+.line-1 {
+  stroke: #03c8ca;
+}
+
+@-webkit-keyframes offset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes offset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes opacityGraph {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityGraph {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.bg-0 {
+  -webkit-animation: opacityGraph 8s linear;
+          animation: opacityGraph 8s linear;
+}
+
+
+.bg-1 {
+  -webkit-animation: opacityGraph 12s linear;
+          animation: opacityGraph 12s linear;
+}
+
+
+.line-0,
+.line-1 {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  -webkit-animation: offset 4.5s linear forwards;
+          animation: offset 4.5s linear forwards;
+}
+
+
+.line-0 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+
+.line-1 {
+  -webkit-animation-delay: .55s;
+          animation-delay: .55s;
 }
 
 

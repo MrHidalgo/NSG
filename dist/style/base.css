@@ -433,8 +433,8 @@ section {
 
 
 .btn__square-2 {
-  right: -webkit-calc(59px * 5);
-  right: calc(59px * 5);
+  right: -webkit-calc(59px * 3);
+  right: calc(59px * 3);
   bottom: -webkit-calc(59px * 10);
   bottom: calc(59px * 10);
 }
