@@ -312,7 +312,7 @@ section {
 	}
 	&-3 {
 		right: calc((59px * 11) + 32px);
-		top: calc(59px * 10);
+		top: calc(59px * 9);
 		@include respond-to(large) {
 			right: calc((59px * 6) + 32px);
 			top: calc(59px * 9);

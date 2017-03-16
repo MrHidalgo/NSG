@@ -124,6 +124,7 @@
 
 		&_bottom {
 			top: 30%;
+			right: 0;
 		}
 	}
 
@@ -139,12 +140,6 @@
 			@include respond-to(small-max) {
 				top: 0;
 			}
-		}
-
-
-		&-bottom {
-			bottom: 0;
-			left: 0;
 		}
 	}
 
@@ -162,12 +157,6 @@
 			left: 0;
 			@include respond-to(small-max) {
 				top: 0;
-			}
-
-
-			&_bottom {
-				bottom: 0;
-				left: 0;
 			}
 		}
 	}
@@ -210,4 +199,28 @@
 	.only__count--active & {
 		animation: rotate 1.5s linear;
 	}
+}
+
+
+
+#only-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+.only-footer-line {
+	fill: transparent;
+	stroke-width: 2.5px;
+
+	&_0 {
+		stroke: #03c8ca;
+	}
+	&_1 {
+		stroke: #9e009e;
+	}
+}
+.only-footer-bg {
+	fill: $c-white;
+	transform: translateY(-10px);
 }

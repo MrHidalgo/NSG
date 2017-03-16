@@ -33,15 +33,27 @@
 	.container {
 		z-index: 10;
 	}
+}
 
 
-	&__img {
-		&-line,
-		&-bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 0;
-		}
+#footer-border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.footer-line {
+	fill: transparent;
+	stroke-width: 2.5px;
+
+	&_0 {
+		stroke: #03c8ca;
 	}
+	&_1 {
+		stroke: #9e009e;
+	}
+}
+.footer-bg {
+	fill: $c-white;
+	transform: translateY(-5px);
 }
