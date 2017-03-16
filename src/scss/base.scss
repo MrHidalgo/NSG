@@ -274,23 +274,53 @@ section {
 	z-index: 30;
 	@include mixinDimensions(62px);
 	overflow: hidden;
+	@include respond-to(small-max) {
+		display: none;
+	}
 
 
 	&-0 {
 		left: calc(59px * 12);
-		bottom: calc(59px * 3);
+		top: calc(59px * 14);
+		@include respond-to(large) {
+			top: calc(59px * 10);
+			left: calc(59px * 5);
+		}
+		@include respond-to(medium) {
+			left: calc(59px * 3);
+			top: calc(59px * 9);
+		}
 	}
 	&-1 {
 		left: calc(59px * 5);
-		bottom: calc(59px * 7);
+		top: calc(59px * 11);
+		@include respond-to(large) {
+			left: calc(59px * 1);
+			top: calc(59px * 9);
+		}
+		@include respond-to(medium) {
+			left: calc(59px * 1);
+			top: calc(59px * 7);
+		}
 	}
 	&-2 {
-		right: calc(59px * 3);
-		bottom: calc(59px * 10);
+		right: calc((59px * 3) + 32px);
+		top: calc(59px * 8);
+		@include respond-to(large) {
+			right: calc(59px * 2);
+		}
 	}
 	&-3 {
-		right: calc(59px * 11);
-		bottom: calc(59px * 5);
+		right: calc((59px * 11) + 32px);
+		top: calc(59px * 10);
+		@include respond-to(large) {
+			right: calc((59px * 6) + 32px);
+			top: calc(59px * 9);
+		}
+		@include respond-to(medium) {
+			right: calc(59px * 1);
+			top: calc(59px * 6);
+		}
 	}
 
 

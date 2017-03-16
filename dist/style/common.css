@@ -600,7 +600,7 @@ input[type="radio"] {
 
 .header {
   position: relative;
-  min-height: 1100px;
+  min-height: 1000px;
   background-color: #000;
   background-image: url("../image/img-bg.png");
   background-repeat: repeat;
@@ -618,6 +618,11 @@ input[type="radio"] {
   .header {
     min-height: 700px;
   }
+}
+
+
+.header .container-fluid {
+  z-index: 15;
 }
 
 
@@ -669,7 +674,7 @@ input[type="radio"] {
   font-family: "proximanova-black";
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding-top: 150px;
+  padding-top: 130px;
   padding-bottom: 70px;
 }
 
@@ -718,6 +723,13 @@ input[type="radio"] {
   right: 100px;
   height: 100px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .header__scroll {
+    display: none;
+  }
 }
 
 
@@ -805,13 +817,19 @@ input[type="radio"] {
 
 #graph {
   z-index: 10;
-  bottom: 100px;
+  bottom: 30px;
 }
 
 
 #bg-header {
   bottom: -30px;
-  left: 0;
+}
+
+@media screen and (max-width: 991px) {
+  
+  #bg-header {
+    bottom: -5px;
+  }
 }
 
 

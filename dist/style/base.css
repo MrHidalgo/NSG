@@ -415,36 +415,111 @@ section {
   overflow: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  
+  .btn__square {
+    display: none;
+  }
+}
+
 
 .btn__square-0 {
   left: -webkit-calc(59px * 12);
   left: calc(59px * 12);
-  bottom: -webkit-calc(59px * 3);
-  bottom: calc(59px * 3);
+  top: -webkit-calc(59px * 14);
+  top: calc(59px * 14);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .btn__square-0 {
+    top: -webkit-calc(59px * 10);
+    top: calc(59px * 10);
+    left: -webkit-calc(59px * 5);
+    left: calc(59px * 5);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .btn__square-0 {
+    left: -webkit-calc(59px * 3);
+    left: calc(59px * 3);
+    top: -webkit-calc(59px * 9);
+    top: calc(59px * 9);
+  }
 }
 
 
 .btn__square-1 {
   left: -webkit-calc(59px * 5);
   left: calc(59px * 5);
-  bottom: -webkit-calc(59px * 7);
-  bottom: calc(59px * 7);
+  top: -webkit-calc(59px * 11);
+  top: calc(59px * 11);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .btn__square-1 {
+    left: -webkit-calc(59px * 1);
+    left: calc(59px * 1);
+    top: -webkit-calc(59px * 9);
+    top: calc(59px * 9);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .btn__square-1 {
+    left: -webkit-calc(59px * 1);
+    left: calc(59px * 1);
+    top: -webkit-calc(59px * 7);
+    top: calc(59px * 7);
+  }
 }
 
 
 .btn__square-2 {
-  right: -webkit-calc(59px * 3);
-  right: calc(59px * 3);
-  bottom: -webkit-calc(59px * 10);
-  bottom: calc(59px * 10);
+  right: -webkit-calc((59px * 3) + 32px);
+  right: calc((59px * 3) + 32px);
+  top: -webkit-calc(59px * 8);
+  top: calc(59px * 8);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .btn__square-2 {
+    right: -webkit-calc(59px * 2);
+    right: calc(59px * 2);
+  }
 }
 
 
 .btn__square-3 {
-  right: -webkit-calc(59px * 11);
-  right: calc(59px * 11);
-  bottom: -webkit-calc(59px * 5);
-  bottom: calc(59px * 5);
+  right: -webkit-calc((59px * 11) + 32px);
+  right: calc((59px * 11) + 32px);
+  top: -webkit-calc(59px * 10);
+  top: calc(59px * 10);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .btn__square-3 {
+    right: -webkit-calc((59px * 6) + 32px);
+    right: calc((59px * 6) + 32px);
+    top: -webkit-calc(59px * 9);
+    top: calc(59px * 9);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .btn__square-3 {
+    right: -webkit-calc(59px * 1);
+    right: calc(59px * 1);
+    top: -webkit-calc(59px * 6);
+    top: calc(59px * 6);
+  }
 }
 
 

@@ -12,7 +12,7 @@
 
 .header {
 	position: relative;
-	min-height: 1100px;
+	min-height: 1000px;
 	background-color: $c-black;
 	background-image: url("../image/img-bg.png");
 	background-repeat: repeat;
@@ -21,6 +21,11 @@
 	}
 	@include respond-to(medium-max) {
 		min-height: 700px;
+	}
+
+
+	.container-fluid {
+		z-index: 15;
 	}
 
 
@@ -75,7 +80,7 @@
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		padding: {
-			top: (150) * 1px;
+			top: (130) * 1px;
 			bottom: 70px;
 		}
 		@include respond-to(large-max) {
@@ -113,6 +118,9 @@
 		right: 100px;
 		height: 100px;
 		overflow: hidden;
+		@include respond-to(small-max) {
+			display: none;
+		}
 
 
 		&-line {
@@ -175,13 +183,15 @@
 
 #graph {
 	z-index: 10;
-	bottom: 100px;
+	bottom: 30px;
 }
 
 
 #bg-header {
 	bottom: -30px;
-	left: 0;
+	@include respond-to(medium-max) {
+		bottom: -5px;
+	}
 }
 
 

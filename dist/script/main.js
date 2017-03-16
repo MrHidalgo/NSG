@@ -25,6 +25,7 @@ $(window).on("load resize ready scroll", function(){
 
 $(document).ready(function(){
 
+
     /* LOGO CLICK SCROLL TO TOP */
     $(".logotype").on("click", function(e) {
         $('body,html').animate(
@@ -33,6 +34,7 @@ $(document).ready(function(){
             }, 1000
         );
     });
+
 
     /* LANG */
     $(".language__btn").on("click", function(){
