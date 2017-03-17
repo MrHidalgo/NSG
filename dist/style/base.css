@@ -498,8 +498,8 @@ section {
 .btn__square-3 {
   right: -webkit-calc((59px * 11) + 32px);
   right: calc((59px * 11) + 32px);
-  top: -webkit-calc(59px * 10);
-  top: calc(59px * 10);
+  top: -webkit-calc(59px * 9);
+  top: calc(59px * 9);
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
