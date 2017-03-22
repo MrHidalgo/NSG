@@ -44,12 +44,22 @@
 			left: auto;
 			right: auto;
 		};
+
+
+		&.fadeIn {
+			animation-duration: 12s;
+		}
 	}
 
 
 	&__dynamic {
 		bottom: -150px;
 		z-index: 2;
+
+
+		&.fadeIn {
+			animation-duration: 10s;
+		}
 	}
 
 

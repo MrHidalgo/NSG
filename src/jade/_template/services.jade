@@ -28,7 +28,9 @@ include ../_mixin/macrosMixin
 
 mixin list(textArr)
     -for(var j = 0; j < textArr.length; j++)
-        p.services__text!= textArr[j]
+        p(
+            class="hidden services__text services__text-" + j
+        )!= textArr[j]
 
 
 section.services#services

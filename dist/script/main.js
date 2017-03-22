@@ -96,6 +96,12 @@ $(document).ready(function(){
         dots: true,
         nav:true
     });
+    $(".case__right-carousel .owl-prev").on("click", function(){
+        $(".case__left-carousel").find(".owl-prev").click();
+    });
+    $(".case__right-carousel .owl-next").on("click", function(){
+        $(".case__left-carousel").find(".owl-next").click();
+    });
 
 
     /* FEEDBACK */
@@ -140,8 +146,7 @@ $(document).ready(function(){
 
     /* ANIMATION - VIEW PORT CHECK PAGE */
     if($(window).width() > '767') {
-        var classNameSection    =   ".services .container, " +
-            ".partner .container, .client .container, .case .container, " +
+        var classNameSection    =  ".partner .container, .client .container, .case .container, " +
             ".contacts .container, .feedback .container, .insights .container";
 
         $(classNameSection).addClass('hidden').viewportChecker({
@@ -150,38 +155,76 @@ $(document).ready(function(){
                 removeClassAfterAnimation: true
             }
         );
-        $(".btn__square-0").viewportChecker({
-                callbackFunction: function() {
-                    setTimeout(function(){
-                        $(".btn__square-0").addClass("active");
-                    }, 500);
-                }
+        $(".header__сoordinate-axis").addClass('hidden').viewportChecker({
+                classToAdd: 'visible animated fadeIn',
+                classToRemove : 'hidden',
+                removeClassAfterAnimation: true
             }
         );
-        $(".btn__square-1").viewportChecker({
-                callbackFunction: function() {
-                    setTimeout(function(){
-                        $(".btn__square-1").addClass("active");
-                    }, 1000);
-                }
+        $(".header__dynamic").addClass('hidden').viewportChecker({
+                classToAdd: 'visible animated fadeIn',
+                classToRemove : 'hidden',
+                removeClassAfterAnimation: true
             }
         );
-        $(".btn__square-2").viewportChecker({
-                callbackFunction: function() {
+        $(".services .container").addClass('hidden').viewportChecker({
+                classToAdd: 'visible animated slideInUp',
+                classToRemove : 'hidden'
+                // , removeClassAfterAnimation: true
+                , callbackFunction: function(){
                     setTimeout(function(){
-                        $(".btn__square-2").addClass("active");
+                        $(".services__text-0").removeClass("hidden").addClass("visible animated slideInLeft");
                     }, 0);
-                }
-            }
-        );
-        $(".btn__square-3").viewportChecker({
-                callbackFunction: function() {
                     setTimeout(function(){
-                        $(".btn__square-3").addClass("active");
-                    }, 1500);
+                        $(".services__text-1").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 800);
+                    setTimeout(function(){
+                        $(".services__text-2").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 1600);
+                    setTimeout(function(){
+                        $(".services__text-3").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 2400);
+                    setTimeout(function(){
+                        $(".services__text-4").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 3200);
+                    setTimeout(function(){
+                        $(".services__text-5").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 4000);
                 }
             }
         );
+        // $(".btn__square-0").viewportChecker({
+        //         callbackFunction: function() {
+        //             setTimeout(function(){
+        //                 $(".btn__square-0").addClass("active");
+        //             }, 500);
+        //         }
+        //     }
+        // );
+        // $(".btn__square-1").viewportChecker({
+        //         callbackFunction: function() {
+        //             setTimeout(function(){
+        //                 $(".btn__square-1").addClass("active");
+        //             }, 1000);
+        //         }
+        //     }
+        // );
+        // $(".btn__square-2").viewportChecker({
+        //         callbackFunction: function() {
+        //             setTimeout(function(){
+        //                 $(".btn__square-2").addClass("active");
+        //             }, 0);
+        //         }
+        //     }
+        // );
+        // $(".btn__square-3").viewportChecker({
+        //         callbackFunction: function() {
+        //             setTimeout(function(){
+        //                 $(".btn__square-3").addClass("active");
+        //             }, 1500);
+        //         }
+        //     }
+        // );
         $(".only .container").addClass('hidden').viewportChecker({
                 classToAdd: 'visible animated slideInUp',
                 classToRemove : 'hidden',

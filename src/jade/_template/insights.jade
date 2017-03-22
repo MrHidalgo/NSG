@@ -6,45 +6,45 @@ section.insights#insights
 
     .container
 
-        +mainTitle("insights__title", "insights")
+        +mainTitle("insights__title", "founders:")
 
         .insights__row.clearfix
             .insights_left
                 .insights_left-wrap
                     .insights__img-wrap
                         img(
-                            src="./image/img-insights-0.png"
+                            src="./image/img-founder-0.png"
                             title=""
                             alt=""
                             class="insights__img"
                         )
                     .insights__text-wrap
-                        p.insights__data!= "/ 22. 11. 2016"
-                        p.insights__text!= insightsText
-
-                .insights__btn-wrap
-                    a(
-                        href="javascript:void(0);"
-                        title=""
-                        class="btn btn_header btn_more btn-more-js"
-                    )!= "SHOW MORE"
+                        p.insights__data!= "/ " + insightsText
+                        p.insights__text!= "Dmitriy</br><span class='insights__text_upper'>Pleshakov</span>"
 
             .insights_right
                 .insights_right-wrap
                     .insights__img-wrap
                         img(
-                            src="./image/img-insights-1.png"
+                            src="./image/img-founder-1.png"
                             title=""
                             alt=""
                             class="insights__img"
                         )
                     .insights__text-wrap
-                        p.insights__data!= "/ 22. 11. 2016"
-                        p.insights__text!= insightsText
+                        p.insights__data!= "/ " + insightsText
+                        p.insights__text!= "Dmitriy</br><span class='insights__text_upper'>Bilash</span>"
 
-                .insights__btn-wrap
+                //-.insights__btn-wrap
                     a(
                         href="javascript:void(0);"
                         title=""
                         class="btn btn_header btn_insight btn-start-js"
                     )!= "START"
+
+        .insights__btn-wrap
+            a(
+                href="javascript:void(0);"
+                title=""
+                class="btn btn_header btn_more btn-more-js"
+            )!= "SHOW MORE"

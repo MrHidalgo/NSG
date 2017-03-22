@@ -12,10 +12,7 @@
 
 
 	&__row {
-		padding-bottom: 100px;
-		@include respond-to(small-max) {
-			padding-bottom: 50px;
-		}
+		padding-bottom: 50px;
 	}
 
 
@@ -83,7 +80,7 @@
 			size: 18px;
 		};
 		color: $c-dim-gray;
-		padding-bottom: 10px;
+		padding-bottom: 15px;
 		@include respond-to(small-max) {
 			font-size: 16px;
 		}
@@ -92,13 +89,19 @@
 
 	&__text {
 		font-size: 20px;
+		letter-spacing: 1px;
 		@include respond-to(small-max) {
 			font-size: 18px;
 		}
 
 
+		&_upper {
+			text-transform: uppercase;
+		}
+
+
 		&-wrap {
-			padding-left: 15px;
+			padding-left: 20px;
 			@include respond-to(large-max) {
 				padding-left: 0;
 				margin-top: 10px;
@@ -110,7 +113,7 @@
 
 	&__btn {
 		&-wrap {
-			margin-top: 100px;
+			margin-bottom: 100px;
 			display: flex;
 			justify-content: space-around;
 			@include respond-to(small-max) {

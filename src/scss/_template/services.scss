@@ -37,6 +37,7 @@
 			left: 5px;
 			right: 5px;
 		};
+		overflow: hidden;
 		@include respond-to(small-max) {
 			margin: 0 0 30px;
 			padding: {
@@ -98,13 +99,13 @@
 	&__text {
 		position: relative;
 		padding-left: 40px;
-		//height: 36px;
 		line-height: 2;
 		font: {
 			size: 18px;
 			family: $f-PN-regular;
 		};
 		letter-spacing: 2px;
+		animation-duration: 1.5s;
 
 
 		.services__block-1 & {

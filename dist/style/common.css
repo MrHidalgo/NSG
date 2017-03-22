@@ -641,9 +641,21 @@ input[type="radio"] {
 }
 
 
+.header__сoordinate-axis.fadeIn {
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+
+
 .header__dynamic {
   bottom: -150px;
   z-index: 2;
+}
+
+
+.header__dynamic.fadeIn {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
 
@@ -990,6 +1002,7 @@ input[type="radio"] {
 .services__block {
   margin-left: 5px;
   margin-right: 5px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -1069,6 +1082,8 @@ input[type="radio"] {
   font-size: 18px;
   font-family: "proximanova-reg";
   letter-spacing: 2px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 
@@ -1753,14 +1768,7 @@ input[type="radio"] {
 
 
 .insights__row {
-  padding-bottom: 100px;
-}
-
-@media screen and (max-width: 767px) {
-  
-  .insights__row {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 50px;
 }
 
 
@@ -1858,7 +1866,7 @@ input[type="radio"] {
 .insights__data {
   font-size: 18px;
   color: #666;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1871,6 +1879,7 @@ input[type="radio"] {
 
 .insights__text {
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1881,8 +1890,13 @@ input[type="radio"] {
 }
 
 
+.insights__text_upper {
+  text-transform: uppercase;
+}
+
+
 .insights__text-wrap {
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1895,7 +1909,7 @@ input[type="radio"] {
 
 
 .insights__btn-wrap {
-  margin-top: 100px;
+  margin-bottom: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
