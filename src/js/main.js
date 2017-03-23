@@ -156,7 +156,7 @@ $(document).ready(function(){
             }
         );
         $(".header__сoordinate-axis").addClass('hidden').viewportChecker({
-                classToAdd: 'visible animated fadeIn',
+                classToAdd: 'visible animated fadeIn slideInUp',
                 classToRemove : 'hidden',
                 removeClassAfterAnimation: true
             }
@@ -177,19 +177,19 @@ $(document).ready(function(){
                     }, 0);
                     setTimeout(function(){
                         $(".services__text-1").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 800);
+                    }, 1000);
                     setTimeout(function(){
                         $(".services__text-2").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 1600);
+                    }, 2000);
                     setTimeout(function(){
                         $(".services__text-3").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 2400);
+                    }, 3000);
                     setTimeout(function(){
                         $(".services__text-4").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 3200);
+                    }, 4000);
                     setTimeout(function(){
                         $(".services__text-5").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 4000);
+                    }, 5000);
                 }
             }
         );

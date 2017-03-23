@@ -12,6 +12,7 @@
 
 .header {
 	position: relative;
+	overflow: hidden;
 	min-height: 1000px;
 	background-color: $c-black;
 	background-image: url("../image/img-bg.png");
@@ -47,7 +48,7 @@
 
 
 		&.fadeIn {
-			animation-duration: 12s;
+			animation-duration: 10s;
 		}
 	}
 
