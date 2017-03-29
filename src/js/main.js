@@ -47,7 +47,7 @@ $(document).ready(function(){
     $(".partner__carousel").owlCarousel({
         items: 3,
         loop: true,
-        dots: true,
+        dots: false,
         nav: true,
         responsive: {
             300: {
@@ -67,7 +67,7 @@ $(document).ready(function(){
     $(".client__carousel").owlCarousel({
         items: 3,
         loop: true,
-        dots: true,
+        dots: false,
         nav: true,
         responsive: {
             300: {
@@ -88,19 +88,13 @@ $(document).ready(function(){
         items: 1,
         loop: true,
         dots: true,
-        nav:true
-    });
-    $(".case__right-carousel").owlCarousel({
+        nav: true
+    })
+    $(".case__row").owlCarousel({
         items: 1,
         loop: true,
-        dots: true,
+        dots: false,
         nav:true
-    });
-    $(".case__right-carousel .owl-prev").on("click", function(){
-        $(".case__left-carousel").find(".owl-prev").click();
-    });
-    $(".case__right-carousel .owl-next").on("click", function(){
-        $(".case__left-carousel").find(".owl-next").click();
     });
 
 

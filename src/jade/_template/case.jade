@@ -18,82 +18,301 @@ section.case
 
         +mainTitle("case__title", "latest case")
 
-        .case__row.clearfix
+        .case__row.owl-carousel
+            .case__box.clearfix
+                .case_left
 
-            .case_left
-
-                .case__bg
-                    .case__left-carousel.owl-carousel
-                        img(
-                            src="./image/img-case.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__bg-img"
-                        )
-                        img(
-                            src="./image/img-case.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__bg-img"
-                        )
-                        img(
-                            src="./image/img-case.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__bg-img"
-                        )
-                        img(
-                            src="./image/img-case.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__bg-img"
-                        )
+                    .case__bg
+                        .case__left-carousel.owl-carousel
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
 
 
-            .case_right
-                .case__right-carousel.owl-carousel
-                    .case__right-wrap
-                        img(
-                            src="./image/img-case-coo.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__right-img"
-                        )
+                .case_right
+                    .case__right-carousel
+                        .case__right-wrap
+                            .case__right-img
+                                .case__right-img--wrap
+                                    img(
+                                        src="./image/img-case-coo.png"
+                                        alt=""
+                                        title=""
+                                        class="img_responsive case__right-img"
+                                )
 
-                        .case__right-desc
-                            p.case__sub-title!= "/ задача"
-                            p.case__text!= caseText0
-                            p.case__sub-title!= "/ реализация"
-                            p.case__text!= caseText1
-                            p.case__sub-title!= "/ результаты"
+                            .case__right-desc
+                                p.case__sub-title!= "/ задача"
+                                p.case__text!= caseText0
+                                p.case__sub-title!= "/ реализация"
+                                p.case__text!= caseText1
+                                p.case__sub-title!= "/ результаты"
 
-                            ul.case__list
-                                -for(var i = 0; i < caseArr.length; i++)
-                                    li.case__list-item
-                                        .case__list-icon-wrap
-                                            i(class="case__list-icon case__list-icon-" + i)
-                                        p.case__list-text.case__text!= caseArr[i]
-                    .case__right-wrap
-                        img(
-                            src="./image/img-case-coo.png"
-                            alt=""
-                            title=""
-                            class="img_responsive case__right-img"
-                        )
+                                ul.case__list
+                                    -for(var i = 0; i < caseArr.length; i++)
+                                        li.case__list-item
+                                            .case__list-icon-wrap
+                                                i(class="case__list-icon case__list-icon-" + i)
+                                            p.case__list-text.case__text!= caseArr[i]
 
-                        .case__right-desc
-                            p.case__sub-title!= "/ задача"
-                            p.case__text!= caseText0
-                            p.case__sub-title!= "/ реализация"
-                            p.case__text!= caseText1
-                            p.case__sub-title!= "/ результаты"
 
-                            ul.case__list
-                                -for(var i = 0; i < caseArr.length; i++)
-                                    li.case__list-item
-                                        .case__list-icon-wrap
-                                            i(class="case__list-icon case__list-icon-" + i)
-                                        p.case__list-text.case__text!= caseArr[i]
+
+
+            .case__box.clearfix
+                .case_left
+
+                    .case__bg
+                        .case__left-carousel.owl-carousel
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+
+
+                .case_right
+                    .case__right-carousel
+                        .case__right-wrap
+                            .case__right-img--wrap
+                                img(
+                                    src="./image/img-case-coo.png"
+                                    alt=""
+                                    title=""
+                                    class="img_responsive case__right-img"
+                                )
+
+                            .case__right-desc
+                                p.case__sub-title!= "/ задача"
+                                p.case__text!= caseText0
+                                p.case__sub-title!= "/ реализация"
+                                p.case__text!= caseText1
+                                p.case__sub-title!= "/ результаты"
+
+                                ul.case__list
+                                    -for(var i = 0; i < caseArr.length; i++)
+                                        li.case__list-item
+                                            .case__list-icon-wrap
+                                                i(class="case__list-icon case__list-icon-" + i)
+                                            p.case__list-text.case__text!= caseArr[i]
+
+
+
+
+            .case__box.clearfix
+                .case_left
+
+                    .case__bg
+                        .case__left-carousel.owl-carousel
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+
+
+                .case_right
+                    .case__right-carousel
+                        .case__right-wrap
+                            .case__right-img--wrap
+                                img(
+                                    src="./image/img-case-coo.png"
+                                    alt=""
+                                    title=""
+                                    class="img_responsive case__right-img"
+                                )
+
+                            .case__right-desc
+                                p.case__sub-title!= "/ задача"
+                                p.case__text!= caseText0
+                                p.case__sub-title!= "/ реализация"
+                                p.case__text!= caseText1
+                                p.case__sub-title!= "/ результаты"
+
+                                ul.case__list
+                                    -for(var i = 0; i < caseArr.length; i++)
+                                        li.case__list-item
+                                            .case__list-icon-wrap
+                                                i(class="case__list-icon case__list-icon-" + i)
+                                            p.case__list-text.case__text!= caseArr[i]
+
+
+
+
+            .case__box.clearfix
+                .case_left
+
+                    .case__bg
+                        .case__left-carousel.owl-carousel
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+
+
+                .case_right
+                    .case__right-carousel
+                        .case__right-wrap
+                            .case__right-img--wrap
+                                img(
+                                    src="./image/img-case-coo.png"
+                                    alt=""
+                                    title=""
+                                    class="img_responsive case__right-img"
+                                )
+
+                            .case__right-desc
+                                p.case__sub-title!= "/ задача"
+                                p.case__text!= caseText0
+                                p.case__sub-title!= "/ реализация"
+                                p.case__text!= caseText1
+                                p.case__sub-title!= "/ результаты"
+
+                                ul.case__list
+                                    -for(var i = 0; i < caseArr.length; i++)
+                                        li.case__list-item
+                                            .case__list-icon-wrap
+                                                i(class="case__list-icon case__list-icon-" + i)
+                                            p.case__list-text.case__text!= caseArr[i]
+
+
+
+
+            .case__box.clearfix
+                .case_left
+
+                    .case__bg
+                        .case__left-carousel.owl-carousel
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+                            img(
+                                src="./image/img-case.png"
+                                alt=""
+                                title=""
+                                class="img_responsive case__bg-img"
+                            )
+
+
+                .case_right
+                    .case__right-carousel
+                        .case__right-wrap
+                            .case__right-img--wrap
+                                img(
+                                    src="./image/img-case-coo.png"
+                                    alt=""
+                                    title=""
+                                    class="img_responsive case__right-img"
+                                )
+
+                            .case__right-desc
+                                p.case__sub-title!= "/ задача"
+                                p.case__text!= caseText0
+                                p.case__sub-title!= "/ реализация"
+                                p.case__text!= caseText1
+                                p.case__sub-title!= "/ результаты"
+
+                                ul.case__list
+                                    -for(var i = 0; i < caseArr.length; i++)
+                                        li.case__list-item
+                                            .case__list-icon-wrap
+                                                i(class="case__list-icon case__list-icon-" + i)
+                                            p.case__list-text.case__text!= caseArr[i]
+
+
 
 
 

@@ -174,9 +174,6 @@ section {
 /// SLIDER
 ///
 .owl {
-	&-nav {}
-
-
 	&-prev,
 	&-next {
 		cursor: pointer;
@@ -186,15 +183,6 @@ section {
 		line-height: 50px;
 		font-size: 0;
 		text-align: center;
-
-
-		.case__right-carousel & {
-			position: absolute;
-			top: 0;
-			@include respond-to(small-max) {
-				display: none;
-			}
-		}
 
 
 		&:before {
@@ -217,19 +205,6 @@ section {
 			top: 0;
 			@include mixinDimensions(1px, 50px);
 			background-color: $c-black;
-
-
-			.case__right-carousel & {
-				display: none;
-			}
-		}
-
-
-		.case__right-carousel & {
-			left: 15%;
-			@include respond-to(large) {
-				left: 5%;
-			}
 		}
 	}
 	&-next {
@@ -237,11 +212,51 @@ section {
 		&:before {
 			@include retina-sprite($sp-i-carousel-right-group);
 		}
+	}
+}
+.case__row > .owl-nav {
+	.owl {
+		&-prev,
+		&-next {
+			position: absolute;
+			top: 10px;
+			@include respond-to(medium) {
+				top: 620px;
+			}
+		}
 
-		.case__right-carousel & {
-			right: 15%;
+
+		&-prev {
+			&:after {
+				display: none;
+			}
+
+
+			right: 38%;
 			@include respond-to(large) {
-				right: 5%;
+				right: 42%;
+			}
+			@include respond-to(medium) {
+				right: auto;
+				left: 17%;
+			}
+			@include respond-to(small-max) {
+				right: auto;
+				left: 0;
+			}
+		}
+
+
+		&-next{
+			right: 7%;
+			@include respond-to(large) {
+				right: 0;
+			}
+			@include respond-to(medium) {
+				right: 17%;
+			}
+			@include respond-to(small-max) {
+				right: 0;
 			}
 		}
 	}

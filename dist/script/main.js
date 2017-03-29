@@ -47,7 +47,7 @@ $(document).ready(function(){
     $(".partner__carousel").owlCarousel({
         items: 3,
         loop: true,
-        dots: true,
+        dots: false,
         nav: true,
         responsive: {
             300: {
@@ -67,7 +67,7 @@ $(document).ready(function(){
     $(".client__carousel").owlCarousel({
         items: 3,
         loop: true,
-        dots: true,
+        dots: false,
         nav: true,
         responsive: {
             300: {
@@ -88,19 +88,13 @@ $(document).ready(function(){
         items: 1,
         loop: true,
         dots: true,
-        nav:true
+        nav: true
     });
-    $(".case__right-carousel").owlCarousel({
+    $(".case__row").owlCarousel({
         items: 1,
         loop: true,
-        dots: true,
+        dots: false,
         nav:true
-    });
-    $(".case__right-carousel .owl-prev").on("click", function(){
-        $(".case__left-carousel").find(".owl-prev").click();
-    });
-    $(".case__right-carousel .owl-next").on("click", function(){
-        $(".case__left-carousel").find(".owl-next").click();
     });
 
 
@@ -156,7 +150,7 @@ $(document).ready(function(){
             }
         );
         $(".header__сoordinate-axis").addClass('hidden').viewportChecker({
-                classToAdd: 'visible animated fadeIn',
+                classToAdd: 'visible animated fadeIn slideInUp',
                 classToRemove : 'hidden',
                 removeClassAfterAnimation: true
             }
@@ -177,19 +171,19 @@ $(document).ready(function(){
                     }, 0);
                     setTimeout(function(){
                         $(".services__text-1").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 800);
+                    }, 1000);
                     setTimeout(function(){
                         $(".services__text-2").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 1600);
+                    }, 2000);
                     setTimeout(function(){
                         $(".services__text-3").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 2400);
+                    }, 3000);
                     setTimeout(function(){
                         $(".services__text-4").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 3200);
+                    }, 4000);
                     setTimeout(function(){
                         $(".services__text-5").removeClass("hidden").addClass("visible animated slideInLeft");
-                    }, 4000);
+                    }, 5000);
                 }
             }
         );

@@ -600,6 +600,7 @@ input[type="radio"] {
 
 .header {
   position: relative;
+  overflow: hidden;
   min-height: 1000px;
   background-color: #000;
   background-image: url("../image/img-bg.png");
@@ -642,8 +643,8 @@ input[type="radio"] {
 
 
 .header__сoordinate-axis.fadeIn {
-  -webkit-animation-duration: 12s;
-          animation-duration: 12s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
 
@@ -1544,18 +1545,37 @@ input[type="radio"] {
 }
 
 
+.case__row {
+  position: relative;
+}
+
+
 .case_left, .case_right {
   float: left;
   width: 50%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   
   .case_left, .case_right {
     float: none;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .case_left {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .case_left {
+    display: none;
   }
 }
 
@@ -1575,16 +1595,25 @@ input[type="radio"] {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   
   .case__bg {
     width: 100%;
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .case__bg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (max-width: 767px) {
   
   .case__bg {
+    width: 100%;
     background-image: none;
     height: auto;
   }
@@ -1625,6 +1654,13 @@ input[type="radio"] {
 
 .case__right-img {
   display: inline-block !important;
+}
+
+
+.case__right-img--wrap {
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 

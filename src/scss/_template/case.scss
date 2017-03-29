@@ -23,17 +23,32 @@
 	}
 
 
+	&__row {
+		position: relative;
+	}
+
+
 	&_left,
 	&_right {
 		float: left;
 		width: 50%;
-		@include respond-to(small-max) {
+		@include respond-to(medium-max) {
 			float: none;
 			width: $w-all;
 			padding: {
 				left: 15px;
 				right: 15px;
 			};
+		}
+	}
+
+
+	&_left {
+		@include respond-to(medium) {
+			padding-bottom: 100px;
+		}
+		@include respond-to(small-max) {
+			display: none;
 		}
 	}
 
@@ -50,10 +65,17 @@
 		@include mixinDimensions(491px, 519px);
 		background-image: url("../image/img-case-bg.png");
 		background-repeat: no-repeat;
-		@include respond-to(large-max) {
+		@include respond-to(large) {
 			width: $w-all;
 		}
+		@include respond-to(medium) {
+			margin: {
+				left: auto;
+				right: auto;
+			};
+		}
 		@include respond-to(small-max) {
+			width: $w-all;
 			background-image: none;
 			height: auto;
 		}
@@ -87,6 +109,15 @@
 	&__right {
 		&-img {
 			display: inline-block !important;
+
+
+			&--wrap {
+				padding: {
+					top: 10px;
+					left: 50px;
+					right: 50px;
+				}
+			}
 		}
 		&-carousel {
 			position: relative;
