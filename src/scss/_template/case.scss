@@ -112,18 +112,24 @@
 
 
 			&--wrap {
-				padding: {
-					top: 10px;
-					left: 50px;
-					right: 50px;
+				@include respond-to(small-max) {
+					padding: {
+						top: 10px;
+						left: 50px;
+						right: 50px;
+					}
 				}
 			}
 		}
+
+
 		&-carousel {
 			position: relative;
 			text-align: center;
 			padding-bottom: 15px;
 		}
+
+
 		&-desc {
 			text-align: left;
 		}
