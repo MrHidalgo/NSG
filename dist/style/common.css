@@ -1153,6 +1153,7 @@ input[type="radio"] {
 @media screen and (max-width: 767px) {
   
   .only {
+    z-index: 1;
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -1330,6 +1331,13 @@ input[type="radio"] {
           transform: translateY(-80px);
 }
 
+@media screen and (max-width: 479px) {
+  
+  #only-header {
+    top: 50px;
+  }
+}
+
 
 .only-bg {
   fill: #FFF;
@@ -1381,6 +1389,13 @@ input[type="radio"] {
           transform: translateY(-10px);
 }
 
+@media screen and (max-width: 767px) {
+  
+  #only__wrap-image {
+    z-index: 0;
+  }
+}
+
 
 .partner {
   position: relative;
@@ -1392,6 +1407,7 @@ input[type="radio"] {
   
   .partner {
     padding-top: 50px;
+    z-index: 0;
   }
 }
 
@@ -1530,7 +1546,7 @@ input[type="radio"] {
 @media screen and (max-width: 767px) {
   
   .case {
-    padding-bottom: 50px;
+    padding-bottom: 15px;
   }
 }
 
@@ -1960,6 +1976,7 @@ input[type="radio"] {
 @media screen and (max-width: 767px) {
   
   .insights__btn-wrap {
+    display: none;
     margin-top: 30px;
   }
 }
