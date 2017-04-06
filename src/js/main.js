@@ -237,6 +237,31 @@ $(document).ready(function(){
                 }
             }
         );
+    } else  {
+
+        var classNameServices = ".services__text-0, .services__text-1, .services__text-2, .services__text-3, .services__text-4, .services__text-5";
+
+        $(classNameServices).removeClass("hidden").addClass("visible");
+        $(".services .container").removeClass("hidden");
+
+        $(".only .container").addClass('hidden').viewportChecker({
+                classToAdd: 'visible animated',
+                classToRemove : 'hidden',
+                removeClassAfterAnimation: true,
+                callbackFunction: function(){
+                    setTimeout(function(){
+                        $(".only__count").addClass("only__count--active");
+                        $(".only__count--num").countTo({
+                            speed: 1500,
+                            onComplete: function () {
+                                $(".only__img").removeClass("infinite");
+                                $(".only__count").removeClass("only__count--active");
+                            }
+                        });
+                    }, 500);
+                }
+            }
+        );
     }
 
     /* ADD TMPL IN ONLY SECTION */

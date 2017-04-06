@@ -13,6 +13,7 @@
 	}
 	@include respond-to(small-max) {
 		padding-top: 50px;
+		z-index: 0;
 	}
 
 
