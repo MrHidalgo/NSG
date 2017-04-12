@@ -18,9 +18,14 @@ section.insights#insights
                             alt=""
                             class="insights__img"
                         )
+                        a(
+                            href="javascript:void(0);"
+                            title="Facebook link"
+                            class="insights__btn-link"
+                        )
                     .insights__text-wrap
                         p.insights__data!= "/ " + insightsText
-                        p.insights__text!= "Dmitriy</br><span class='insights__text_upper'>Pleshakov</span>"
+                        p.insights__text!= "Dmitriy&nbsp;<span class='insights__text_upper'>Pleshakov</span>"
 
             .insights_right
                 .insights_right-wrap
@@ -31,16 +36,15 @@ section.insights#insights
                             alt=""
                             class="insights__img"
                         )
+                        a(
+                            href="javascript:void(0);"
+                            title="Facebook link"
+                            class="insights__btn-link"
+                        )
                     .insights__text-wrap
                         p.insights__data!= "/ " + insightsText
-                        p.insights__text!= "Dmitriy</br><span class='insights__text_upper'>Bilash</span>"
+                        p.insights__text!= "Dmitriy&nbsp;<span class='insights__text_upper'>Bilash</span>"
 
-                //-.insights__btn-wrap
-                    a(
-                        href="javascript:void(0);"
-                        title=""
-                        class="btn btn_header btn_insight btn-start-js"
-                    )!= "START"
 
         .insights__btn-wrap
             a(

@@ -7,9 +7,9 @@
 
 .case {
 	position: relative;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 	@include respond-to(small-max) {
-		padding-bottom: 15px;
+		padding-bottom: 50px;
 	}
 
 
@@ -19,7 +19,10 @@
 
 
 	.main__title {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
+		@include respond-to(small-max) {
+			padding-bottom: 50px;
+		}
 	}
 
 
@@ -126,12 +129,26 @@
 		&-carousel {
 			position: relative;
 			text-align: center;
-			padding-bottom: 15px;
 		}
 
 
 		&-desc {
 			text-align: left;
+		}
+
+
+		&-text {
+			font: {
+				size: 20px;
+				family: $f-PN-black;
+			};
+			letter-spacing: 2px;
+			margin: {
+				top: 30px;
+				bottom: 15px;
+			}
+			text-align: center;
+			text-transform: uppercase;
 		}
 	}
 

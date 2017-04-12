@@ -40,9 +40,17 @@
 	}
 
 
-	&_header {
+	&_header,
+	&_next {
 		display: inline-block;
 		width: 230px;
+	}
+
+
+	&_header {
+		@include respond-to(small-max) {
+			margin-bottom: 100px;
+		}
 	}
 
 
@@ -89,6 +97,7 @@
 	}
 
 
+	&_next,
 	&_more {
 		display: block;
 		color: $c-black;
@@ -108,6 +117,19 @@
 			color: $c-white;
 			border-color: $c-purple;
 			background-color: $c-purple;
+		}
+	}
+
+
+	&_next {
+		display: none;
+		margin: {
+			top: 15px;
+			left: auto;
+			right: auto;
+		};
+		@include respond-to(small-max) {
+			display: block;
 		}
 	}
 }
@@ -131,6 +153,7 @@ section {
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 1.2;
+		min-height: 36px;
 		@include respond-to(small-max) {
 			font-size: 30px;
 		}
@@ -144,9 +167,13 @@ section {
 			};
 			@include respond-to(small-max) {
 				padding: {
-					left: 35px;
-					right: 35px;
+					left: 45px;
+					right: 45px;
 				};
+			}
+			@include respond-to(extra-small) {
+				display: block;
+				width: 100%;
 			}
 
 
@@ -154,20 +181,19 @@ section {
 			&:after {
 				content: "";
 				position: absolute;
-				top: 27px;
+				top: 50%;
 				@include mixinDimensions(45px, 1px);
 				background-color: $c-black;
 				@include respond-to(small-max) {
-					top: 18px;
 					width: 30px;
 				}
 			}
 
 			&:before {
-				left: 0;
+				left: 10px;
 			}
 			&:after {
-				right: 0;
+				right: 10px;
 			}
 		}
 	}
@@ -223,7 +249,7 @@ section {
 		&-prev,
 		&-next {
 			position: absolute;
-			top: 10px;
+			top: 0;
 			@include respond-to(medium) {
 				top: 620px;
 			}

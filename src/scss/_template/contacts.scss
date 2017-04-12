@@ -6,11 +6,17 @@
 @import "../_variable/sprite";
 
 .contacts {
-	padding-bottom: 50px;
+	padding-bottom: 150px;
+	@include respond-to(small-max) {
+		padding-bottom: 50px;
+	}
 
 
 	&__title {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
+		@include respond-to(small-max) {
+			padding-bottom: 50px;
+		}
 	}
 
 

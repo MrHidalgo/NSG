@@ -18,14 +18,31 @@
 	animation-duration: .4s;
 
 
+	>.container-fluid {
+		@include respond-to(small-max) {
+			height: inherit;
+		}
+	}
+
+
 	.open-menu & {
 		display: block;
 	}
 
 
 	&__row {
+		position: absolute;
+		bottom: 0;
+		left: 15px;
+		width: calc(100% - 30px);
 		padding: {
 			bottom: 15px;
 		};
+	}
+}
+@media screen and (max-height: 479px) {
+	.menu__row {
+		bottom: auto;
+		top: 400px;
 	}
 }
