@@ -12,27 +12,6 @@ function scrollWindowNavigationFixedLarge() {
     }
 }
 
-function servicesLineAnimation(className) {
-    setTimeout(function(){
-        $(className + " .services__text-0").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 0);
-    setTimeout(function(){
-        $(className + " .services__text-1").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 1000);
-    setTimeout(function(){
-        $(className + " .services__text-2").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 2000);
-    setTimeout(function(){
-        $(className + " .services__text-3").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 3000);
-    setTimeout(function(){
-        $(className + " .services__text-4").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 4000);
-    setTimeout(function(){
-        $(className + " .services__text-5").removeClass("hidden").addClass("visible animated slideInLeft");
-    }, 5000);
-}
-
 
 $(window).on("load resize ready scroll", function(){
     if($(window).width() > '1024') {
@@ -111,13 +90,6 @@ $(document).ready(function(){
         dots: true,
         nav: true
     });
-    // $(".case__row").owlCarousel({
-    //     items: 1,
-    //     loop: true,
-    //     dots: false,
-    //     nav:true,
-    //     autoHeight:true
-    // });
     $(".case__row").on('initialized.owl.carousel', function(e) {
         setTimeout(function(){
             $(".case__row").trigger('refresh.owl.carousel');
@@ -208,19 +180,15 @@ $(document).ready(function(){
                 classToAdd: 'visible animated slideInUp',
                 classToRemove : 'hidden'
                 , callbackFunction: function(){
-
-                    var servicesBlock0 = $(".services__block-0 .services__row-list > *").length + 1,
-                        servicesBlock1 = $(".services__block-1 .services__row-list > *").length;
-
-                    setTimeout(function() {
-                        servicesLineAnimation(".services__block-0");
-                    }, 0);
-                    setTimeout(function() {
-                        servicesLineAnimation(".services__block-1");
-                    }, servicesBlock0 * 1000);
-                    setTimeout(function() {
-                        servicesLineAnimation(".services__block-2");
-                    }, (servicesBlock0 + servicesBlock1) * 1000);
+                    setTimeout(function(){
+                        $(".services__block-0 .services__row-list").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 200);
+                    setTimeout(function(){
+                        $(".services__block-1 .services__row-list").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 1000);
+                    setTimeout(function(){
+                        $(".services__block-2 .services__row-list").removeClass("hidden").addClass("visible animated slideInLeft");
+                    }, 2000);
                 }
             }
         );
