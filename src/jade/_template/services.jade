@@ -29,7 +29,7 @@ include ../_mixin/macrosMixin
 mixin list(textArr)
     -for(var j = 0; j < textArr.length; j++)
         p(
-            class="hidden services__text services__text-" + j
+            class="services__text services__text-" + j
         )!= textArr[j]
 
 
@@ -54,7 +54,7 @@ section.services#services
                         span.services__tilte-text!= servicesArr[i]
                         i.services__tilte-icon
 
-                    .services__row-list
+                    .services__row-list.hidden
                         if(i === 0)
                             +list(servicesArr0)
                         else if(i === 1)
