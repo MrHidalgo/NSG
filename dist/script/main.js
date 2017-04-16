@@ -212,11 +212,11 @@ $(document).ready(function(){
         );
     } else  {
 
-        var classNameServices = ".services__text-0, .services__text-1, .services__text-2, .services__text-3, .services__text-4, .services__text-5";
+        var classNameServices = ".services__block-0 .services__row-list, " +
+            ".services__block-1 .services__row-list, " +
+            ".services__block-2 .services__row-list";
 
         $(classNameServices).removeClass("hidden").addClass("visible");
-
-        $(".services .container").removeClass("hidden");
 
         $(".only .container").addClass('hidden').viewportChecker({
                 classToAdd: 'visible animated',
