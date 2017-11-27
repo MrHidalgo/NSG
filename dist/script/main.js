@@ -138,7 +138,7 @@ $(document).ready(function(){
             topHeightOffset;
 
         if ($(window).width() > '767') {
-            topHeightOffset = $(id).offset().top - navHeight;
+            topHeightOffset = $(id).offset().top - navHeight
         } else {
             topHeightOffset = $(id).offset().top;
         }

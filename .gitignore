@@ -4,3 +4,4 @@ node_modules/*
 src/image/*
 
 *.iml
+*.zip

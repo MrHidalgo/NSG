@@ -43,9 +43,9 @@ exports.mainScriptTask = function (taskName) {
             // .pipe(
             //     changed(distFolder, changedOption)
             // )
-            .pipe(
-                fixmyjs(fixmyjsOption)
-            )
+            // .pipe(
+            //     fixmyjs(fixmyjsOption)
+            // )
             .pipe(
                 gulp.dest(distFolder)
             )

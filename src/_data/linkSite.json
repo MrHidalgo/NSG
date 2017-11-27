@@ -9,10 +9,10 @@
 
 
   "scriptLink" : [
-    "./vendor/js/jquery-1.11.1.min.js",
+    "./vendor/js/jquery-3.2.1.min.js",
     "./vendor/js/jquery.countTo.js",
     "./vendor/js/jquery.viewportchecker.min.js",
     "./vendor/js/owl.carousel.min.js",
-    "./script/main.min.js"
+    "./script/main.js"
   ]
 }
